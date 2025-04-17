@@ -1,9 +1,9 @@
 :root{
-	--ft-size: 10px;
+	--ft-size: 12px;
 }
 html {
 	user-select: none;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 #songText-processed{

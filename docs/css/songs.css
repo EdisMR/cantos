@@ -1,1 +1,1 @@
-:root{--ft-size:10px;}html{user-select:none;font-size:10px;}#songText-processed{font-size:11px;}.chord{color:rgb(81,255,28);font-weight:bold;}footer{margin-top:100px;margin-bottom:25px;}@media screen and (min-width:1200px){:root{--ft-size:16px}#songText-processed{font-size:16px}}
+:root{--ft-size:12px;}html{user-select:none;font-size:12px;}#songText-processed{font-size:11px;}.chord{color:rgb(81,255,28);font-weight:bold;}footer{margin-top:100px;margin-bottom:25px;}@media screen and (min-width:1200px){:root{--ft-size:16px}#songText-processed{font-size:16px}}
