@@ -89,7 +89,7 @@ function removeEmptySpace() {
 	if(windowAvailW > 1000) return
 
 	// Get the width of the body information section and convert it to a floating point number
-	let bodyScrollW = parseFloat(bodyinformation.getBoundingClientRect().width);
+	let bodyScrollW = parseFloat(bodyinformation.getBoundingClientRect().width)+getComputedStyle(bodyinformation).marginLeft.replace('px','')+Number.parseInt(getComputedStyle(bodyinformation).padding.replace('px',''));
 
 	// Calculate the value to apply for zoom adjustment based on the window and body widths
 	let valueToApply = ((windowAvailW * 100) / bodyScrollW);
