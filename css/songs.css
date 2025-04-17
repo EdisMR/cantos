@@ -1,5 +1,13 @@
+:root{
+	--ft-size: 10px;
+}
 html {
 	user-select: none;
+	font-size: 10px;
+}
+
+#songText-processed{
+	font-size: 11px;
 }
 
 .chord {
@@ -10,4 +18,13 @@ html {
 footer {
 	margin-top: 100px;
 	margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+	:root{
+		--ft-size: 16px;
+	}
+	#songText-processed{
+		font-size: 16px;
+	}
 }

@@ -1,5 +1,9 @@
+:root{
+	--ft-size: 10px;
+}
 html {
 	user-select: none;
+	font-size: 10px;
 }
 
 .category-chip {
@@ -14,4 +18,13 @@ input {
 footer {
 	margin-top: 100px;
 	margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+	:root{
+		--ft-size: 16px;
+	}
+	html {
+		font-size: 16px;
+	}
 }
