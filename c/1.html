@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Canto 1</title>
+	<link rel="stylesheet" href="../css/matcha.css">
+	<link rel="stylesheet" href="../css/songs.css">
+</head>
+
+<body>
+	<div class="flex space-between wrap">
+		<div>
+			<button><a href="../index.html" style="color:white;">&#127968; Inicio</a></button>
+		</div>
+		<div>
+			<button onclick="maximizeSongText()">&#x2927; Maximizar</button>
+		</div>
+		<div>
+			<button onclick="transposedSong(10)">-1</button>
+			<button onclick="transposedSong(11)">-&#189;</button>
+			<button onclick="resetSong()">&#11119;</button>
+			<button onclick="transposedSong(1)">+&#189;</button>
+			<button onclick="transposedSong(2)">+1</button>
+		</div>
+	</div>
+
+	<section>
+		<h1>Marco Navarro - Quiero ver</h1>
+
+		<pre id="songText-original" class="hidden">
+[Em]       [G]      [D]           [Am] 
+Quiero_ver más allá Espíritu de Dios,
+[Em]   [G]            [D] [Am]        [D]
+quiero ver con tus ojos     sobrenaturalmente.
+[Em]      [G]       [D]       [Am] 
+Quiero_ver más allá Espíritu de Dios,
+[Em]   [G]            [D] [Am]        [D] 
+quiero ver con tus ojos     sobrenaturalmente.
+
+[G]       [C]         [D]
+Quiero ver lo que tienes para mí,
+      [B]       [Em]
+lo que hoy debo vivir,
+      [D]         [C] 
+lo que tengo que hacer,
+                    [G] 
+cuál es mi misión de hoy,
+[C]   [D]     [Em][D]   [C]
+ayúdame, hazme ver más allá,
+   [D]          [G] 
+Oh Padre Celestial.
+		</pre>
+	</section>
+
+	<section id="songMaximizationArea">
+		<pre id="songText-processed"></pre>
+	</section>
+
+	<section class="categories">
+		<p>categorias: Espiritu Santo</p>
+	</section>
+
+	<footer class="flex space-between">
+		<span>&copy;2025</span>
+		<span>@EdisMR</span>
+	</footer>
+</body>
+<script src="../js/songs.js"></script>
+
+</html>
