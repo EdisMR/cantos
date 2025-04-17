@@ -1,17 +1,17 @@
-html{
+html {
 	user-select: none;
 }
 
-.category-chip{
+.category-chip {
 	border-radius: var(--bd-radius);
 	cursor: pointer;
 }
 
-input{
+input {
 	user-select: text;
 }
 
-footer{
+footer {
 	margin-top: 100px;
 	margin-bottom: 25px;
 }

@@ -49,6 +49,7 @@ function transposeChord(chord, steps, useFlats = false) {
 	return newRoot + suffix;
 }
 
+
 // Transpone todo el texto (todos los acordes dentro de [ ])
 function transposeSongText(text, steps, useFlats = false) {
 	return text.replace(/\[([^\]]+)\]/g, (_, chord) => {
@@ -57,16 +58,19 @@ function transposeSongText(text, steps, useFlats = false) {
 	});
 }
 
+
 function transposedSong(steps) {
 	let result = transposeSongText(formattedText, steps, false);
 	formattedText = result;
 	processedText.innerHTML = result;
 }
 
+
 function resetSong(){
 	formatText();
 	processedText.innerHTML = formattedText;
 }
+
 
 
 function maximizeSongText(){

@@ -85,14 +85,11 @@ function searchSongName(text) {
 
 
 
-
-
 function filterSongs(id) {
 	const filteredSongs = cantos.filter(canto => canto.categories.includes(id));
 	displayedSongs = filteredSongs;
 	renderSongsList();
 }
-
 
 
 
