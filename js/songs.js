@@ -76,3 +76,25 @@ function resetSong(){
 function maximizeSongText(){
 	songMaximizationArea.requestFullscreen();
 }
+
+
+
+function removeEmptySpace() {
+	// Get the available width of the window screen
+	let windowAvailW = document.body.getBoundingClientRect().width;
+	let bodyinformation=document.getElementById('songText-processed');
+
+	bodyinformation.scrollIntoView({ behavior: 'smooth' });
+
+	if(windowAvailW > 1000) return
+
+	// Get the width of the body information section and convert it to a floating point number
+	let bodyScrollW = parseFloat(bodyinformation.getBoundingClientRect().width);
+
+	// Calculate the value to apply for zoom adjustment based on the window and body widths
+	let valueToApply = ((windowAvailW * 100) / bodyScrollW);
+
+	// Set the zoom level of the body information section to the calculated value
+	bodyinformation.style.zoom = `${valueToApply}%`;
+}
+removeEmptySpace();

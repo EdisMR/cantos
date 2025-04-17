@@ -1,13 +1,14 @@
 :root{
-	--ft-size: 12px;
+	--ft-size: 13px;
 }
 html {
 	user-select: none;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 #songText-processed{
 	font-size: 11px;
+	width: fit-content;
 }
 
 .chord {

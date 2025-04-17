@@ -76,6 +76,8 @@ function searchSongName(text) {
 	if (text.length > 0) {
 		const filteredSongs = cantos.filter(canto => canto.name.toLowerCase().includes(text.toLowerCase()));
 		displayedSongs = filteredSongs;
+	} else {
+		displayedSongs = [];
 	}
 	renderSongsList();
 }
