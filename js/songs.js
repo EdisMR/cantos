@@ -1,1 +1,78 @@
-const _0x207017=_0x17fb;(function(_0x3d2544,_0x144104){const _0x1ac56f=_0x17fb,_0x165987=_0x3d2544();while(!![]){try{const _0x11a066=-parseInt(_0x1ac56f(0xc6))/0x1*(-parseInt(_0x1ac56f(0xbf))/0x2)+-parseInt(_0x1ac56f(0xc2))/0x3+parseInt(_0x1ac56f(0xc1))/0x4*(parseInt(_0x1ac56f(0xc5))/0x5)+parseInt(_0x1ac56f(0xc7))/0x6+-parseInt(_0x1ac56f(0xca))/0x7+-parseInt(_0x1ac56f(0xcb))/0x8+parseInt(_0x1ac56f(0xc8))/0x9;if(_0x11a066===_0x144104)break;else _0x165987['push'](_0x165987['shift']());}catch(_0x4f5866){_0x165987['push'](_0x165987['shift']());}}}(_0x3908,0xaf275));const originalText=document[_0x207017(0xcc)]('songText-original')[_0x207017(0xbe)],processedText=document[_0x207017(0xcc)]('songText-processed'),songMaximizationArea=document['getElementById']('songMaximizationArea');function _0x17fb(_0x23ad08,_0x36b7ce){const _0x39087e=_0x3908();return _0x17fb=function(_0x17fb8c,_0x2db2e8){_0x17fb8c=_0x17fb8c-0xbc;let _0x30b752=_0x39087e[_0x17fb8c];return _0x30b752;},_0x17fb(_0x23ad08,_0x36b7ce);}let formattedText='';function formatText(){const _0x5b81d3=_0x207017;formattedText=originalText[_0x5b81d3(0xbc)](/\[([^\]]+)\]/g,_0x5b81d3(0xc0));}formatText(),processedText[_0x207017(0xbe)]=formattedText;const NOTES_SHARP=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],FLAT_EQUIV={'C#':'Db','D#':'Eb','F#':'Gb','G#':'Ab','A#':'Bb'};function transposeChord(_0x4a8813,_0x1c076a,_0x41a0e3=![]){const _0x171b97=_0x207017,_0x27c265=_0x4a8813[_0x171b97(0xc3)](/^([A-G]{1}[#b]?)(.*)$/);if(!_0x27c265)return _0x4a8813;const [_0x246aa0,_0x1a5b84,_0x3b3ed2]=_0x27c265,_0x2ba868=_0x1a5b84['replace']('Db','C#')[_0x171b97(0xbc)]('Eb','D#')[_0x171b97(0xbc)]('Gb','F#')[_0x171b97(0xbc)]('Ab','G#')[_0x171b97(0xbc)]('Bb','A#'),_0x28ab0d=NOTES_SHARP[_0x171b97(0xc4)](_0x2ba868);if(_0x28ab0d===-0x1)return _0x4a8813;const _0x40a880=(_0x28ab0d+_0x1c076a+0xc)%0xc;let _0x485ae8=NOTES_SHARP[_0x40a880];return _0x41a0e3&&FLAT_EQUIV[_0x485ae8]&&(_0x485ae8=FLAT_EQUIV[_0x485ae8]),_0x485ae8+_0x3b3ed2;}function transposeSongText(_0x524656,_0x2f1d79,_0x1ed004=![]){const _0x2e54ce=_0x207017;return _0x524656[_0x2e54ce(0xbc)](/\[([^\]]+)\]/g,(_0x1260ac,_0x27b14d)=>{const _0x3d12e9=_0x2e54ce,_0x56d456=transposeChord(_0x27b14d,_0x2f1d79,_0x1ed004);return _0x3d12e9(0xc9)+_0x56d456+']</span>';});}function transposedSong(_0x46e9e8){const _0xb4bd33=_0x207017;let _0x4d3728=transposeSongText(formattedText,_0x46e9e8,![]);formattedText=_0x4d3728,processedText[_0xb4bd33(0xbe)]=_0x4d3728;}function resetSong(){const _0x2b7a23=_0x207017;formatText(),processedText[_0x2b7a23(0xbe)]=formattedText;}function maximizeSongText(){const _0x4cfba7=_0x207017;songMaximizationArea[_0x4cfba7(0xbd)]();}function _0x3908(){const _0x2ba484=['match','indexOf','5lDWKNa','469393BrVIVN','3500406yIDMVG','11025657diHwnM','<span\x20class=\x22chord\x22>[','1945167fOvEhN','9230720rOuroI','getElementById','replace','requestFullscreen','innerHTML','2JAEVYv','<span\x20class=\x22chord\x22>[$1]</span>','2810804Ofeian','2494254YSOwcf'];_0x3908=function(){return _0x2ba484;};return _0x3908();}
+const originalText = document.getElementById('songText-original').innerHTML;
+const processedText = document.getElementById('songText-processed');
+const songMaximizationArea = document.getElementById('songMaximizationArea');
+
+let formattedText = '';
+function formatText() {
+	formattedText = originalText.replace(/\[([^\]]+)\]/g, '<span class="chord">[$1]</span>');
+}
+formatText();
+processedText.innerHTML = formattedText;
+
+
+
+
+/**********************************
+ * Transposición de acordes
+ * ********************************
+*/
+
+// Lista circular de notas en sostenidos
+const NOTES_SHARP = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+
+// Equivalencias bemoles
+const FLAT_EQUIV = { 'C#': 'Db', 'D#': 'Eb', 'F#': 'Gb', 'G#': 'Ab', 'A#': 'Bb' };
+
+// Transpone un acorde individual (ej: "F#m", "Bb7")
+function transposeChord(chord, steps, useFlats = false) {
+	const match = chord.match(/^([A-G]{1}[#b]?)(.*)$/);
+	if (!match) return chord;
+
+	const [_, root, suffix] = match;
+
+	const normalizedRoot = root.replace('Db', 'C#')
+		.replace('Eb', 'D#')
+		.replace('Gb', 'F#')
+		.replace('Ab', 'G#')
+		.replace('Bb', 'A#');
+
+	const index = NOTES_SHARP.indexOf(normalizedRoot);
+	if (index === -1) return chord;
+
+	const newIndex = (index + steps + 12) % 12;
+	let newRoot = NOTES_SHARP[newIndex];
+
+	if (useFlats && FLAT_EQUIV[newRoot]) {
+		newRoot = FLAT_EQUIV[newRoot];
+	}
+
+	return newRoot + suffix;
+}
+
+
+// Transpone todo el texto (todos los acordes dentro de [ ])
+function transposeSongText(text, steps, useFlats = false) {
+	return text.replace(/\[([^\]]+)\]/g, (_, chord) => {
+		const transposed = transposeChord(chord, steps, useFlats);
+		return `<span class="chord">[${transposed}]</span>`;
+	});
+}
+
+
+function transposedSong(steps) {
+	let result = transposeSongText(formattedText, steps, false);
+	formattedText = result;
+	processedText.innerHTML = result;
+}
+
+
+function resetSong(){
+	formatText();
+	processedText.innerHTML = formattedText;
+}
+
+
+
+function maximizeSongText(){
+	songMaximizationArea.requestFullscreen();
+}
