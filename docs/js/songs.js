@@ -1,1 +1,136 @@
-const _0x215e21=_0x2e69;(function(_0x48c867,_0x481247){const _0x3d290a=_0x2e69,_0x8a053a=_0x48c867();while(!![]){try{const _0x56e1bd=-parseInt(_0x3d290a(0xe9))/0x1*(-parseInt(_0x3d290a(0xc6))/0x2)+-parseInt(_0x3d290a(0xdc))/0x3+parseInt(_0x3d290a(0xee))/0x4*(-parseInt(_0x3d290a(0xcd))/0x5)+parseInt(_0x3d290a(0xd2))/0x6+parseInt(_0x3d290a(0xef))/0x7*(-parseInt(_0x3d290a(0xd8))/0x8)+-parseInt(_0x3d290a(0xea))/0x9+-parseInt(_0x3d290a(0xdd))/0xa*(-parseInt(_0x3d290a(0xd3))/0xb);if(_0x56e1bd===_0x481247)break;else _0x8a053a['push'](_0x8a053a['shift']());}catch(_0x56d907){_0x8a053a['push'](_0x8a053a['shift']());}}}(_0x45e3,0x5b195));function _0x2e69(_0x479400,_0x50204e){const _0x45e314=_0x45e3();return _0x2e69=function(_0x2e6979,_0x7b3572){_0x2e6979=_0x2e6979-0xc6;let _0x50f31b=_0x45e314[_0x2e6979];return _0x50f31b;},_0x2e69(_0x479400,_0x50204e);}const originalText=document[_0x215e21(0xde)](_0x215e21(0xd1))[_0x215e21(0xc8)],processedText=document[_0x215e21(0xde)](_0x215e21(0xe1)),songMaximizationArea=document['getElementById']('songMaximizationArea'),closeFullscreenBtn=document[_0x215e21(0xde)](_0x215e21(0xd0));let formattedText='';function _0x45e3(){const _0x210868=['2908851RjtxhS','exitFullscreen','toString','parseFloat','scrollIntoView','104OMQDjV','replace','marginLeft','<span\x20class=\x22chord\x22>[$1]</span>','641766hgqtSL','50ohLIhJ','getElementById','100%','indexOf','songText-processed','getBoundingClientRect','zoom','webkitExitFullscreen','match','click','style','paddingLeft','8104QVleWO','1927332sfTAGp','body','nearest','width','198540boKAGV','361039eYUwNv','2hDYmHR','requestFullscreen','innerHTML','start','toFixed','msExitFullscreen','then','55jgBaiM','marginRight','smooth','closeFullscreen','songText-original','4124328VxnbVG'];_0x45e3=function(){return _0x210868;};return _0x45e3();}function formatText(){const _0x375a68=_0x215e21;formattedText=originalText[_0x375a68(0xd9)](/\[([^\]]+)\]/g,_0x375a68(0xdb));}formatText(),processedText['innerHTML']=formattedText;const NOTES_SHARP=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],FLAT_EQUIV={'C#':'Db','D#':'Eb','F#':'Gb','G#':'Ab','A#':'Bb'};function transposeChord(_0x228bc6,_0x289793,_0x49393b=![]){const _0x31be20=_0x215e21,_0x5d24c5=_0x228bc6[_0x31be20(0xe5)](/^([A-G]{1}[#b]?)(.*)$/);if(!_0x5d24c5)return _0x228bc6;const [_0x56c574,_0xa32a81,_0x409a30]=_0x5d24c5,_0x3efb87=_0xa32a81[_0x31be20(0xd9)]('Db','C#')[_0x31be20(0xd9)]('Eb','D#')['replace']('Gb','F#')[_0x31be20(0xd9)]('Ab','G#')[_0x31be20(0xd9)]('Bb','A#'),_0x4cb083=NOTES_SHARP[_0x31be20(0xe0)](_0x3efb87);if(_0x4cb083===-0x1)return _0x228bc6;const _0x542031=(_0x4cb083+_0x289793+0xc)%0xc;let _0x3b9a2f=NOTES_SHARP[_0x542031];return _0x49393b&&FLAT_EQUIV[_0x3b9a2f]&&(_0x3b9a2f=FLAT_EQUIV[_0x3b9a2f]),_0x3b9a2f+_0x409a30;}function transposeSongText(_0xdda7c6,_0x50677d,_0x4f0f32=![]){const _0x3b5089=_0x215e21;return _0xdda7c6[_0x3b5089(0xd9)](/\[([^\]]+)\]/g,(_0x42f9d4,_0x533cf0)=>{const _0x9895ab=transposeChord(_0x533cf0,_0x50677d,_0x4f0f32);return'['+_0x9895ab+']';});}let workingPromise=![];async function transposedSong(_0x4feab8){const _0x312ac2=_0x215e21;let _0x4cc374=transposeSongText(formattedText,_0x4feab8,![]);formattedText=_0x4cc374,processedText['innerHTML']=_0x4cc374,!workingPromise&&(workingPromise=!![],processedText[_0x312ac2(0xe7)]['zoom']=_0x312ac2(0xdf),new Promise(_0x3e7625=>{setTimeout(()=>{_0x3e7625();},0x3e8);})[_0x312ac2(0xcc)](()=>{removeEmptySpace(),workingPromise=![];}));}async function resetSong(){const _0xe24497=_0x215e21;formatText(),processedText[_0xe24497(0xc8)]=formattedText,await transposedSong(0x0)[_0xe24497(0xcc)](()=>{});}function maximizeSongText(){const _0x5c4e6a=_0x215e21;songMaximizationArea[_0x5c4e6a(0xc7)]();}function removeEmptySpace(){const _0x163ad8=_0x215e21;let _0xb6e7f0=document[_0x163ad8(0xeb)]['getBoundingClientRect']()[_0x163ad8(0xed)];if(_0xb6e7f0>0x5dc)return;let _0x4cb767=Number['parseFloat'](processedText[_0x163ad8(0xe2)]()['width'])+Number[_0x163ad8(0xd6)](getComputedStyle(processedText)[_0x163ad8(0xda)][_0x163ad8(0xd9)]('px',''))+Number[_0x163ad8(0xd6)](getComputedStyle(processedText)[_0x163ad8(0xce)][_0x163ad8(0xd9)]('px',''))+Number[_0x163ad8(0xd6)](getComputedStyle(processedText)[_0x163ad8(0xe8)][_0x163ad8(0xd9)]('px',''))+Number[_0x163ad8(0xd6)](getComputedStyle(processedText)['paddingRight']['replace']('px','')),_0x1be5dc=_0x4cb767*0x64/_0xb6e7f0,_0x52603d=0x64-_0x1be5dc,_0x57d6d0=_0x52603d>0x0;!_0x57d6d0&&(_0x52603d=_0x52603d*-0x1);_0x52603d=Number[_0x163ad8(0xd6)](_0x52603d[_0x163ad8(0xca)](0x2));let _0x46d492='0';_0x57d6d0?_0x46d492=(0x64+_0x52603d)['toString']()+'%':_0x46d492=(0x64-_0x52603d)[_0x163ad8(0xd5)]()+'%',processedText['style'][_0x163ad8(0xe3)]=_0x46d492;}removeEmptySpace(),closeFullscreenBtn['addEventListener'](_0x215e21(0xe6),()=>{closeFullscreen();});function closeFullscreen(){const _0xe0ae4f=_0x215e21;if(document['exitFullscreen'])document[_0xe0ae4f(0xd4)]();else{if(document['webkitExitFullscreen'])document[_0xe0ae4f(0xe4)]();else document['msExitFullscreen']&&document[_0xe0ae4f(0xcb)]();}}songMaximizationArea[_0x215e21(0xd7)]({'behavior':_0x215e21(0xcf),'block':_0x215e21(0xc9),'inline':_0x215e21(0xec)});
+const originalText = document.getElementById('songText-original').innerHTML;
+const processedText = document.getElementById('songText-processed');
+const songMaximizationArea = document.getElementById('songMaximizationArea');
+const closeFullscreenBtn = document.getElementById('closeFullscreen');
+
+let formattedText = '';
+function formatText() {
+	formattedText = originalText.replace(/\[([^\]]+)\]/g, '<span class="chord">[$1]</span>');
+}
+formatText();
+processedText.innerHTML = formattedText;
+
+
+
+
+/**********************************
+ * Transposición de acordes
+ * ********************************
+*/
+
+// Lista circular de notas en sostenidos
+const NOTES_SHARP = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+
+// Equivalencias bemoles
+const FLAT_EQUIV = { 'C#': 'Db', 'D#': 'Eb', 'F#': 'Gb', 'G#': 'Ab', 'A#': 'Bb' };
+
+// Transpone un acorde individual (ej: "F#m", "Bb7")
+function transposeChord(chord, steps, useFlats = false) {
+	const match = chord.match(/^([A-G]{1}[#b]?)(.*)$/);
+	if (!match) return chord;
+
+	const [_, root, suffix] = match;
+
+	const normalizedRoot = root.replace('Db', 'C#')
+		.replace('Eb', 'D#')
+		.replace('Gb', 'F#')
+		.replace('Ab', 'G#')
+		.replace('Bb', 'A#');
+
+	const index = NOTES_SHARP.indexOf(normalizedRoot);
+	if (index === -1) return chord;
+
+	const newIndex = (index + steps + 12) % 12;
+	let newRoot = NOTES_SHARP[newIndex];
+
+	if (useFlats && FLAT_EQUIV[newRoot]) {
+		newRoot = FLAT_EQUIV[newRoot];
+	}
+
+	return newRoot + suffix;
+}
+
+
+// Transpone todo el texto (todos los acordes dentro de [ ])
+function transposeSongText(text, steps, useFlats = false) {
+	return text.replace(/\[([^\]]+)\]/g, (_, chord) => {
+		const transposed = transposeChord(chord, steps, useFlats);
+		return `[${transposed}]`;
+	});
+}
+
+let workingPromise = false
+async function transposedSong(steps) {
+	let result = transposeSongText(formattedText, steps, false);
+	formattedText = result;
+	processedText.innerHTML = result;
+	if (!workingPromise) {
+		workingPromise = true;
+		processedText.style.zoom = "100%";
+		new Promise(resolve => {
+			setTimeout(() => {
+				resolve();
+			}, 1000);
+		}).then(() => {
+			removeEmptySpace();
+			workingPromise = false;
+		});
+	}
+}
+
+
+async function resetSong() {
+	formatText();
+	processedText.innerHTML = formattedText;
+	await transposedSong(0).then(() => { });
+}
+
+
+
+function maximizeSongText() {
+	songMaximizationArea.requestFullscreen();
+}
+
+
+
+function removeEmptySpace() {
+	// Get the available width of the window screen
+	let bodyWidth = document.body.getBoundingClientRect().width;
+	if (bodyWidth > 1500) return
+
+	// Get the width of the body information section and convert it to a floating point number
+	let songWidth = Number.parseFloat(processedText.getBoundingClientRect().width) +
+		Number.parseFloat(getComputedStyle(processedText).marginLeft.replace('px', '')) +
+		Number.parseFloat(getComputedStyle(processedText).marginRight.replace('px', '')) +
+		Number.parseFloat(getComputedStyle(processedText).paddingLeft.replace('px', '')) +
+		Number.parseFloat(getComputedStyle(processedText).paddingRight.replace('px', ''));
+
+	let precentRelative = (songWidth * 100) / bodyWidth;
+	let addOrRemoveInPercent = (100 - precentRelative);
+	let addOrRemoveInPercentIsPositive = addOrRemoveInPercent > 0;
+	if (!addOrRemoveInPercentIsPositive) { addOrRemoveInPercent = addOrRemoveInPercent * -1; }
+
+	addOrRemoveInPercent = Number.parseFloat(addOrRemoveInPercent.toFixed(2));
+	let valueToApply = "0";
+	if (addOrRemoveInPercentIsPositive) {
+		valueToApply = (100 + addOrRemoveInPercent).toString() + "%";
+	} else {
+		valueToApply = (100 - addOrRemoveInPercent).toString() + "%";
+	}
+	processedText.style.zoom = valueToApply;
+}
+removeEmptySpace();
+
+
+
+
+closeFullscreenBtn.addEventListener('click', () => { closeFullscreen(); });
+function closeFullscreen() {
+	if (document.exitFullscreen) {
+		document.exitFullscreen();
+	} else if (document.webkitExitFullscreen) { /* Safari */
+		document.webkitExitFullscreen();
+	} else if (document.msExitFullscreen) { /* IE11 */
+		document.msExitFullscreen();
+	}
+}

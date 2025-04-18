@@ -134,12 +134,3 @@ function closeFullscreen() {
 		document.msExitFullscreen();
 	}
 }
-
-
-
-
-songMaximizationArea.scrollIntoView({
-	behavior: 'smooth',
-	block: 'start',
-	inline: 'nearest'
-});

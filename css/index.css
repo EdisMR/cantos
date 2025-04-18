@@ -1,7 +1,3 @@
-:root {
-	--ft-size: 18px;
-}
-
 html {
 	user-select: none;
 	font-size: var(--ft-size);
@@ -22,8 +18,75 @@ footer {
 }
 
 
-/*portrait / landscape TABLET */
-@media (600px <= width <= 675px) and (orientation: portrait) {
+
+
+
+
+@media (orientation: portrait) and (width < 300px) {
+	:root {
+		--ft-size: 14px;
+	}
+
+	h1 {
+		font-size: 15px;
+	}
+
+	body {
+		padding: 0;
+		margin: 0;
+	}
+
+	form,
+	fieldset {
+		padding: 0;
+		padding-top: 20px;
+	}
+}
+
+
+@media (orientation: portrait) and (300px <=width <=399px) {
+	:root {
+		--ft-size: 17px;
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+
+	body {
+		padding: 0;
+		margin: 0;
+	}
+
+	form,
+	fieldset {
+		padding: 0;
+		padding-top: 20px;
+	}
+}
+
+@media (orientation: portrait) and (400px <=width <=599px) {
+	:root {
+		--ft-size: 15px;
+	}
+
+	h1 {
+		font-size: 19px;
+	}
+
+	body {
+		padding: 0;
+		margin: 0;
+	}
+
+	form,
+	fieldset {
+		padding: 0;
+		padding-top: 20px;
+	}
+}
+
+@media (orientation: portrait) and (600px <=width <=750px) {
 	:root {
 		--ft-size: 14px;
 	}
@@ -37,9 +100,9 @@ footer {
 	}
 }
 
-@media (870px <= width <= 970px) and (orientation: landscape) {
+@media (orientation: portrait) and (width>750px) {
 	:root {
-		--ft-size: 12px;
+		--ft-size: 13px;
 	}
 
 	h1 {
@@ -52,23 +115,28 @@ footer {
 }
 
 
-/*portrait / landscape CELL */
-@media (300px <= width <= 390px) and (orientation: portrait) {
+
+
+
+
+
+
+
+@media (orientation: landscape) and (width < 820px) {
 	:root {
-		--ft-size: 17px;
+		--ft-size: 16px;
 	}
 
 	h1 {
-		font-size: 22px;
+		font-size: 20px;
 	}
 
-	body {
-		padding: 0;
-		margin: 0;
+	#filteredSongsListContainer {
+		column-count: 2;
 	}
 }
 
-@media (820px <= width <= 870px) and (orientation: landscape) {
+@media (orientation: landscape) and (820px <=width <=870px) {
 	:root {
 		--ft-size: 18px;
 	}
@@ -82,7 +150,24 @@ footer {
 	}
 }
 
-@media screen and (width > 970px) {
+
+@media (orientation: landscape) and (870px <=width <=970px) {
+	:root {
+		--ft-size: 14px;
+	}
+
+	h1 {
+		font-size: 18px;
+	}
+
+	#filteredSongsListContainer {
+		column-count: 3;
+		font-size: 16px;
+	}
+}
+
+
+@media (orientation: landscape) and (width > 970px) {
 	:root {
 		--ft-size: 14px;
 	}
@@ -90,6 +175,7 @@ footer {
 	h1 {
 		font-size: 22px;
 	}
+
 	#filteredSongsListContainer {
 		column-count: 3;
 	}
