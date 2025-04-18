@@ -1,6 +1,7 @@
 const originalText = document.getElementById('songText-original').innerHTML;
 const processedText = document.getElementById('songText-processed');
 const songMaximizationArea = document.getElementById('songMaximizationArea');
+const closeFullscreenBtn = document.getElementById('closeFullscreen');
 
 let formattedText = '';
 function formatText() {
@@ -54,26 +55,39 @@ function transposeChord(chord, steps, useFlats = false) {
 function transposeSongText(text, steps, useFlats = false) {
 	return text.replace(/\[([^\]]+)\]/g, (_, chord) => {
 		const transposed = transposeChord(chord, steps, useFlats);
-		return `<span class="chord">[${transposed}]</span>`;
+		return `[${transposed}]`;
 	});
 }
 
-
-function transposedSong(steps) {
+let workingPromise = false
+async function transposedSong(steps) {
 	let result = transposeSongText(formattedText, steps, false);
 	formattedText = result;
 	processedText.innerHTML = result;
+	if (!workingPromise) {
+		workingPromise = true;
+		processedText.style.zoom = "100%";
+		new Promise(resolve => {
+			setTimeout(() => {
+				resolve();
+			}, 1000);
+		}).then(() => {
+			removeEmptySpace();
+			workingPromise = false;
+		});
+	}
 }
 
 
-function resetSong(){
+async function resetSong() {
 	formatText();
 	processedText.innerHTML = formattedText;
+	await transposedSong(0).then(() => { });
 }
 
 
 
-function maximizeSongText(){
+function maximizeSongText() {
 	songMaximizationArea.requestFullscreen();
 }
 
@@ -81,20 +95,51 @@ function maximizeSongText(){
 
 function removeEmptySpace() {
 	// Get the available width of the window screen
-	let windowAvailW = document.body.getBoundingClientRect().width;
-	let bodyinformation=document.getElementById('songText-processed');
-
-	bodyinformation.scrollIntoView({ behavior: 'smooth' });
-
-	if(windowAvailW > 1000) return
+	let bodyWidth = document.body.getBoundingClientRect().width;
+	if (bodyWidth > 1500) return
 
 	// Get the width of the body information section and convert it to a floating point number
-	let bodyScrollW = parseFloat(bodyinformation.getBoundingClientRect().width)+getComputedStyle(bodyinformation).marginLeft.replace('px','')+Number.parseInt(getComputedStyle(bodyinformation).padding.replace('px',''));
+	let songWidth = Number.parseFloat(processedText.getBoundingClientRect().width) +
+		Number.parseFloat(getComputedStyle(processedText).marginLeft.replace('px', '')) +
+		Number.parseFloat(getComputedStyle(processedText).marginRight.replace('px', '')) +
+		Number.parseFloat(getComputedStyle(processedText).paddingLeft.replace('px', '')) +
+		Number.parseFloat(getComputedStyle(processedText).paddingRight.replace('px', ''));
 
-	// Calculate the value to apply for zoom adjustment based on the window and body widths
-	let valueToApply = ((windowAvailW * 100) / bodyScrollW);
+	let precentRelative = (songWidth * 100) / bodyWidth;
+	let addOrRemoveInPercent = (100 - precentRelative);
+	let addOrRemoveInPercentIsPositive = addOrRemoveInPercent > 0;
+	if (!addOrRemoveInPercentIsPositive) { addOrRemoveInPercent = addOrRemoveInPercent * -1; }
 
-	// Set the zoom level of the body information section to the calculated value
-	bodyinformation.style.zoom = `${valueToApply}%`;
+	addOrRemoveInPercent = Number.parseFloat(addOrRemoveInPercent.toFixed(2));
+	let valueToApply = "0";
+	if (addOrRemoveInPercentIsPositive) {
+		valueToApply = (100 + addOrRemoveInPercent).toString() + "%";
+	} else {
+		valueToApply = (100 - addOrRemoveInPercent).toString() + "%";
+	}
+	processedText.style.zoom = valueToApply;
 }
 removeEmptySpace();
+
+
+
+
+closeFullscreenBtn.addEventListener('click', () => { closeFullscreen(); });
+function closeFullscreen() {
+	if (document.exitFullscreen) {
+		document.exitFullscreen();
+	} else if (document.webkitExitFullscreen) { /* Safari */
+		document.webkitExitFullscreen();
+	} else if (document.msExitFullscreen) { /* IE11 */
+		document.msExitFullscreen();
+	}
+}
+
+
+
+
+songMaximizationArea.scrollIntoView({
+	behavior: 'smooth',
+	block: 'start',
+	inline: 'nearest'
+});

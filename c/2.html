@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <div class="flex space-between">
+    <div class="flex space-between wrap" id="songControlButtons">
         <div>
             <button><a href="../index.html" style="color:white;">&#127968; Inicio</a></button>
         </div>
         <div>
             <button onclick="maximizeSongText()">&#x2927; Maximizar</button>
         </div>
-        <div class="flex nowrap">
+        <div class="flex nowrap" id="transpositionButtons">
             <button onclick="transposedSong(10)">-1</button>
             <button onclick="transposedSong(11)">-&#189;</button>
             <button onclick="resetSong()">0</button>
@@ -63,11 +63,12 @@ coro
     </section>
 
     <section id="songMaximizationArea">
+        <button id="closeFullscreen" class="fg-accent">×</button>
         <pre id="songText-processed"></pre>
     </section>
 
     <section class="categories">
-        <p>categorias:Misa - Ofrendas</p>
+        <p>categorias: Misa - Ofrendas</p>
     </section>
 
     <footer class="flex space-between">
