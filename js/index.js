@@ -3,6 +3,7 @@ const songSearchInput = document.getElementById('songSearchInput');
 const filteredSongsListContainer = document.getElementById('filteredSongsListContainer');
 
 const categoriesIndex = [
+	{ id: '0', name: 'Todo' },
 	{ id: '1', name: 'Misa-Entrada' },
 	{ id: '2', name: 'Misa-Ten Piedad' },
 	{ id: '3', name: 'Misa-Gloria' },
@@ -52,7 +53,7 @@ function listCategories() {
 			allCategoryChips.forEach(chip => {
 				chip.classList.remove('fg-success');
 			});
-			console.log(event.target.classList.add('fg-success'))
+			event.target.classList.add('fg-success')
 			filterSongs(category.id)
 		};
 		categoryElement.innerHTML = `${category.name}`;
@@ -60,8 +61,6 @@ function listCategories() {
 	});
 }
 listCategories();
-
-
 
 
 
@@ -85,9 +84,9 @@ function searchSongName(text) {
 
 
 
-
-
 function filterSongs(id) {
+	if (id === '0') { listCompleteSongsList(); return; }
+	displayedSongs = [];
 	const filteredSongs = cantos.filter(canto => canto.categories.includes(id));
 	displayedSongs = filteredSongs;
 	renderSongsList();
@@ -108,9 +107,27 @@ function renderSongsList() {
 			songElement.appendChild(songLink);
 			filteredSongsListContainer.appendChild(songElement);
 		});
-	}
-	else {
-		filteredSongsListContainer.innerHTML = '<li>Sin resultados para mostrar.</li>';
+	} else {
+		filteredSongsListContainer.innerHTML = '<li>No hay resultados</li>';
 	}
 }
-renderSongsList();
+
+
+function listCompleteSongsList() {
+	//Display complete songs list
+	filteredSongsListContainer.innerHTML = '';
+	cantos.forEach(canto => {
+		//*<li><a href="c/1.html">enlace 1</a></li>
+		const songElement = document.createElement('li');
+		const songLink = document.createElement('a');
+		songLink.href = canto.fileUrl;
+		songLink.innerHTML = canto.name;
+		songElement.appendChild(songLink);
+		filteredSongsListContainer.appendChild(songElement);
+	});
+}
+
+
+
+
+listCompleteSongsList();
