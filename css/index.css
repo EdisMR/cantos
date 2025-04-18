@@ -23,7 +23,7 @@ footer {
 
 
 /*portrait / landscape TABLET */
-@media (600px <=width <=650px) and (orientation: portrait) {
+@media (600px <= width <= 675px) and (orientation: portrait) {
 	:root {
 		--ft-size: 14px;
 	}
@@ -37,7 +37,7 @@ footer {
 	}
 }
 
-@media (750px <=width <=800px) and (orientation: landscape) {
+@media (870px <= width <= 970px) and (orientation: landscape) {
 	:root {
 		--ft-size: 12px;
 	}
@@ -53,7 +53,7 @@ footer {
 
 
 /*portrait / landscape CELL */
-@media (350px <=width <=400px) and (orientation: portrait) {
+@media (300px <= width <= 390px) and (orientation: portrait) {
 	:root {
 		--ft-size: 17px;
 	}
@@ -68,7 +68,7 @@ footer {
 	}
 }
 
-@media (850px <=width <=900px) and (orientation: landscape) {
+@media (820px <= width <= 870px) and (orientation: landscape) {
 	:root {
 		--ft-size: 18px;
 	}
@@ -79,5 +79,18 @@ footer {
 
 	#filteredSongsListContainer {
 		column-count: 2;
+	}
+}
+
+@media screen and (width > 970px) {
+	:root {
+		--ft-size: 14px;
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+	#filteredSongsListContainer {
+		column-count: 3;
 	}
 }
