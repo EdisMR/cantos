@@ -2,6 +2,7 @@ const originalText = document.getElementById('songText-original').innerHTML;
 const processedText = document.getElementById('songText-processed');
 const songMaximizationArea = document.getElementById('songMaximizationArea');
 const closeFullscreenBtn = document.getElementById('closeFullscreen');
+const currentYear = document.getElementById('currentYear')
 
 let formattedText = '';
 function formatText() {
@@ -134,3 +135,5 @@ function closeFullscreen() {
 		document.msExitFullscreen();
 	}
 }
+
+currentYear.innerHTML = new Date().getFullYear()

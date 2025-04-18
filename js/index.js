@@ -1,6 +1,7 @@
 const categoriesListContainer = document.getElementById('categories-list-container');
 const songSearchInput = document.getElementById('songSearchInput');
 const filteredSongsListContainer = document.getElementById('filteredSongsListContainer');
+const currentYear = document.getElementById('currentYear')
 
 const categoriesIndex = [
 	{ id: '0', name: 'Todo' },
@@ -129,6 +130,8 @@ function listCompleteSongsList() {
 	});
 }
 
+
+currentYear.innerHTML = new Date().getFullYear()
 
 
 
