@@ -19,23 +19,25 @@ const categoriesIndex = [
 	{ id: '1D', name: 'Espiritu Santo' },
 	{ id: '1E', name: 'Adoración' },
 	{ id: '1F', name: 'Vigilia Pascual' },
-	{ id: '1G', name: 'Tiempo Navidad' },
-	{ id: '1H', name: 'Tiempo Cuaresma' },
-	{ id: '1I', name: 'Tiempo Pascua' },
+	{ id: '1G', name: 'Navidad' },
+	{ id: '1H', name: 'Cuaresma' },
+	{ id: '1I', name: 'Pascua' },
 	{ id: '1J', name: 'Tiempo Ordinario' },
-	{ id: '1K', name: 'Tiempo Adviento' },
-	{ id: '1L', name: 'Tiempo Pentecostés' },
-	{ id: '1M', name: 'Tiempo Epifanía del Señor' },
+	{ id: '1K', name: 'Adviento' },
+	{ id: '1L', name: 'Pentecostés' },
+	{ id: '1M', name: 'Epifanía del Señor' },
 	{ id: '1N', name: 'Luz' },
 	{ id: '1O', name: 'Confirmación' },
 	{ id: '1P', name: 'Bautismo' },
 	{ id: '1Q', name: 'Matrimonio' },
 	{ id: '1R', name: 'Funeral' },
+	{ id: '1S', name: 'Marianos' }
 ]
 
 const cantos = [
 	{ id: '1', name: 'Marco Navarro - Quiero ver', categories: ['1D'], fileUrl: 'c/1.html' },
 	{ id: '2', name: 'Hemos entregado', categories: ['6'], fileUrl: 'c/2.html' },
+	{ id: '3', name: 'Los Padrecitos - Ella Sabía', categories: ['1S'], fileUrl: 'c/3.html' },
 ]
 
 let displayedSongs = []

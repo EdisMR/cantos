@@ -1,1 +1,65 @@
 https://obfuscator.io/
+
+template:
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO</title>
+    <link rel="stylesheet" href="../css/matcha.css">
+    <link rel="stylesheet" href="../css/songs.css">
+</head>
+
+<body>
+    <div class="flex space-between wrap" id="songControlButtons">
+        <div>
+            <button><a href="../index.html" style="color:white;">&#127968; Inicio</a></button>
+        </div>
+        <div>
+            <button onclick="maximizeSongText()">&#x2927; Maximizar</button>
+        </div>
+        <div class="flex nowrap" id="transpositionButtons">
+            <button onclick="transposedSong(10)">-1</button>
+            <button onclick="transposedSong(11)">-&#189;</button>
+            <button onclick="resetSong()">0</button>
+            <button onclick="transposedSong(1)">+&#189;</button>
+            <button onclick="transposedSong(2)">+1</button>
+        </div>
+    </div>
+
+    <section>
+        <h1>TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-TITULO-</h1>
+
+        <pre id="songText-original" class="hidden">
+TEXT HERE TEXT HERE TEXT HERE TEXT HERE TEXT HERE TEXT HERE TEXT HERE HERE TEXT HERE HERE TEXT HERE
+        </pre>
+    </section>
+
+    <section id="songMaximizationArea">
+        <button id="closeFullscreen" class="fg-accent">×</button>
+        <pre id="songText-processed"></pre>
+    </section>
+
+    <section class="categories">
+        <p>categorias: CATEGORIAS-CATEGORIAS-CATEGORIAS-CATEGORIAS-CATEGORIAS-CATEGORIAS-CATEGORIAS</p>
+    </section>
+
+    <footer class="flex space-between">
+        <span>&copy;2025</span>
+        <span>@EdisMR</span>
+    </footer>
+</body>
+<script src="../js/songs.js"></script>
+
+</html>
