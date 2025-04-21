@@ -1,3 +1,98 @@
+class HeaderComponent extends HTMLElement {
+	constructor() {
+		super();
+		const template = document.createElement('template');
+		template.innerHTML = `
+		<div class="flex space-between wrap" id="songControlButtons">
+		<div>
+			<button><a href="../index.html">&#127968; Inicio</a></button>
+		</div>
+		<div>
+			<button onclick="maximizeSongText()">&#x2927; Maximizar</button>
+		</div>
+		<div class="flex nowrap" id="transpositionButtons">
+			<button onclick="transposedSong(10)">-1</button>
+			<button onclick="transposedSong(11)">-&#189;</button>
+			<button onclick="resetSong()">0</button>
+			<button onclick="transposedSong(1)">+&#189;</button>
+			<button onclick="transposedSong(2)">+1</button>
+		</div>
+	</div>
+		`;
+
+		this.appendChild(template.content.cloneNode(true));
+	}
+}
+customElements.define('header-component', HeaderComponent);
+
+
+
+
+
+
+
+
+
+class BodyContentComponent extends HTMLElement{
+	constructor() {
+		super();
+		const template = document.createElement('template');
+		template.innerHTML = `
+		<section>
+		<h1>${songTitle}</h1>
+
+		<pre id="songText-original" class="hidden">
+		${songOriginalText}
+		</pre>
+	</section>
+		`;
+
+		this.appendChild(template.content.cloneNode(true));
+	}
+}
+customElements.define('body-component',BodyContentComponent)
+
+
+
+
+
+
+
+class FooterComponent extends HTMLElement {
+	constructor() {
+		super();
+		const template = document.createElement('template');
+		template.innerHTML = `
+		<section id="songMaximizationArea">
+		<button id="closeFullscreen" class="fg-accent">×</button>
+		<pre id="songText-processed"></pre>
+	</section>
+
+	<section class="categories">
+		<p>categorias: ${categoriesTXT}</p>
+	</section>
+
+	<footer class="flex space-between">
+		<span>&copy;<span id="currentYear"></span></span>
+		<span>@EdisMR</span>
+	</footer>
+		`;
+
+		this.appendChild(template.content.cloneNode(true));
+	}
+}
+customElements.define('footer-component', FooterComponent);
+
+
+
+document.title=songTitle
+
+
+
+
+
+
+
 const originalText = document.getElementById('songText-original').innerHTML;
 const processedText = document.getElementById('songText-processed');
 const songMaximizationArea = document.getElementById('songMaximizationArea');
