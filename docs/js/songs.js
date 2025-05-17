@@ -1,1 +1,234 @@
-const _0x30cf80=_0x19ad;(function(_0x2ecc71,_0x47edab){const _0x51144d=_0x19ad,_0x1ae9da=_0x2ecc71();while(!![]){try{const _0x160992=parseInt(_0x51144d(0x18a))/0x1+-parseInt(_0x51144d(0x1ac))/0x2+-parseInt(_0x51144d(0x190))/0x3*(-parseInt(_0x51144d(0x1b7))/0x4)+-parseInt(_0x51144d(0x1a0))/0x5+-parseInt(_0x51144d(0x191))/0x6+parseInt(_0x51144d(0x18e))/0x7+parseInt(_0x51144d(0x1a5))/0x8*(parseInt(_0x51144d(0x1b5))/0x9);if(_0x160992===_0x47edab)break;else _0x1ae9da['push'](_0x1ae9da['shift']());}catch(_0x37e1e2){_0x1ae9da['push'](_0x1ae9da['shift']());}}}(_0x5a38,0xef490));class HeaderComponent extends HTMLElement{constructor(){const _0x1f4435=_0x19ad;super();const _0x2fea08=document['createElement']('template');_0x2fea08[_0x1f4435(0x1a9)]='\x0a\x09\x09<div\x20class=\x22flex\x20space-between\x20wrap\x22\x20id=\x22songControlButtons\x22>\x0a\x09\x09<div>\x0a\x09\x09\x09<button><a\x20href=\x22../index.html\x22>&#127968;\x20Inicio</a></button>\x0a\x09\x09</div>\x0a\x09\x09<div>\x0a\x09\x09\x09<button\x20onclick=\x22maximizeSongText()\x22>&#x2927;\x20Maximizar</button>\x0a\x09\x09</div>\x0a\x09\x09<div\x20class=\x22flex\x20nowrap\x22\x20id=\x22transpositionButtons\x22>\x0a\x09\x09\x09<button\x20onclick=\x22transposedSong(10)\x22>-1</button>\x0a\x09\x09\x09<button\x20onclick=\x22transposedSong(11)\x22>-&#189;</button>\x0a\x09\x09\x09<button\x20onclick=\x22resetSong()\x22>0</button>\x0a\x09\x09\x09<button\x20onclick=\x22transposedSong(1)\x22>+&#189;</button>\x0a\x09\x09\x09<button\x20onclick=\x22transposedSong(2)\x22>+1</button>\x0a\x09\x09</div>\x0a\x09</div>\x0a\x09\x09',this[_0x1f4435(0x1aa)](_0x2fea08['content']['cloneNode'](!![]));}}customElements['define'](_0x30cf80(0x18d),HeaderComponent);class BodyContentComponent extends HTMLElement{constructor(){const _0x5aa42d=_0x30cf80;super();const _0x5ea5ab=document[_0x5aa42d(0x189)]('template');_0x5ea5ab['innerHTML']=_0x5aa42d(0x1af)+songTitle+_0x5aa42d(0x1ae)+songOriginalText+'\x0a\x09\x09</pre>\x0a\x09</section>\x0a\x09\x09',this[_0x5aa42d(0x1aa)](_0x5ea5ab[_0x5aa42d(0x1a8)]['cloneNode'](!![]));}}customElements[_0x30cf80(0x1ad)]('body-component',BodyContentComponent);class FooterComponent extends HTMLElement{constructor(){const _0x5afa7b=_0x30cf80;super();const _0x5ef4f7=document[_0x5afa7b(0x189)](_0x5afa7b(0x1b8));_0x5ef4f7[_0x5afa7b(0x1a9)]=_0x5afa7b(0x19f)+categoriesTXT+_0x5afa7b(0x1a6),this[_0x5afa7b(0x1aa)](_0x5ef4f7[_0x5afa7b(0x1a8)]['cloneNode'](!![]));}}customElements['define'](_0x30cf80(0x18b),FooterComponent),document[_0x30cf80(0x193)]=songTitle;const originalText=document[_0x30cf80(0x1b1)](_0x30cf80(0x1a7))[_0x30cf80(0x1a9)],processedText=document[_0x30cf80(0x1b1)](_0x30cf80(0x1b4)),songMaximizationArea=document['getElementById'](_0x30cf80(0x194)),closeFullscreenBtn=document[_0x30cf80(0x1b1)]('closeFullscreen'),currentYear=document[_0x30cf80(0x1b1)]('currentYear');function _0x19ad(_0x245437,_0x357f18){const _0x5a38a2=_0x5a38();return _0x19ad=function(_0x19ad7c,_0x5c22a4){_0x19ad7c=_0x19ad7c-0x189;let _0x4568b6=_0x5a38a2[_0x19ad7c];return _0x4568b6;},_0x19ad(_0x245437,_0x357f18);}let formattedText='';function formatText(){const _0x59b237=_0x30cf80;formattedText=originalText[_0x59b237(0x18c)](/\[([^\]]+)\]/g,_0x59b237(0x1a3));}formatText(),processedText[_0x30cf80(0x1a9)]=formattedText;function _0x5a38(){const _0x4eff64=['100%','songText-processed','7767AkxGeZ','marginLeft','4154468yLcDnl','template','addEventListener','createElement','1289349stUTwf','footer-component','replace','header-component','8144948rFHYTj','then','3yrqItV','10214916JiWHlb','marginRight','title','songMaximizationArea','requestFullscreen','width','exitFullscreen','style','zoom','webkitExitFullscreen','toFixed','paddingLeft','toString','parseFloat','\x0a\x09\x09<section\x20id=\x22songMaximizationArea\x22>\x0a\x09\x09<button\x20id=\x22closeFullscreen\x22\x20class=\x22fg-accent\x22>×</button>\x0a\x09\x09<pre\x20id=\x22songText-processed\x22></pre>\x0a\x09</section>\x0a\x0a\x09<section\x20class=\x22categories\x22>\x0a\x09\x09<p>categorias:\x20','9342905HnqUvW','msExitFullscreen','body','<span\x20class=\x22chord\x22>[$1]</span>','indexOf','18248FqchcQ','</p>\x0a\x09</section>\x0a\x0a\x09<footer\x20class=\x22flex\x20space-between\x22>\x0a\x09\x09<span>&copy;<span\x20id=\x22currentYear\x22></span></span>\x0a\x09\x09<span>@EdisMR</span>\x0a\x09</footer>\x0a\x09\x09','songText-original','content','innerHTML','appendChild','click','1817708NQZFiM','define','</h1>\x0a\x0a\x09\x09<pre\x20id=\x22songText-original\x22\x20class=\x22hidden\x22>\x0a\x09\x09','\x0a\x09\x09<section>\x0a\x09\x09<h1>','getBoundingClientRect','getElementById','getFullYear'];_0x5a38=function(){return _0x4eff64;};return _0x5a38();}const NOTES_SHARP=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],FLAT_EQUIV={'C#':'Db','D#':'Eb','F#':'Gb','G#':'Ab','A#':'Bb'};function transposeChord(_0x5ce4bc,_0x254346,_0x15c2ba=![]){const _0x460085=_0x30cf80,_0x23112a=_0x5ce4bc['match'](/^([A-G]{1}[#b]?)(.*)$/);if(!_0x23112a)return _0x5ce4bc;const [_0x258d39,_0x443567,_0x2a7c76]=_0x23112a,_0x18428d=_0x443567[_0x460085(0x18c)]('Db','C#')[_0x460085(0x18c)]('Eb','D#')['replace']('Gb','F#')[_0x460085(0x18c)]('Ab','G#')[_0x460085(0x18c)]('Bb','A#'),_0x363bc3=NOTES_SHARP[_0x460085(0x1a4)](_0x18428d);if(_0x363bc3===-0x1)return _0x5ce4bc;const _0xde46b=(_0x363bc3+_0x254346+0xc)%0xc;let _0x1edae8=NOTES_SHARP[_0xde46b];return _0x15c2ba&&FLAT_EQUIV[_0x1edae8]&&(_0x1edae8=FLAT_EQUIV[_0x1edae8]),_0x1edae8+_0x2a7c76;}function transposeSongText(_0x455336,_0x1b4acb,_0x3eccb5=![]){const _0x50b565=_0x30cf80;return _0x455336[_0x50b565(0x18c)](/\[([^\]]+)\]/g,(_0x25ef8f,_0x485f22)=>{const _0x5f431=transposeChord(_0x485f22,_0x1b4acb,_0x3eccb5);return'['+_0x5f431+']';});}let workingPromise=![];async function transposedSong(_0x1812ed){const _0x319755=_0x30cf80;let _0x147961=transposeSongText(formattedText,_0x1812ed,![]);formattedText=_0x147961,processedText[_0x319755(0x1a9)]=_0x147961,!workingPromise&&(workingPromise=!![],processedText[_0x319755(0x198)][_0x319755(0x199)]=_0x319755(0x1b3),new Promise(_0x1fae27=>{setTimeout(()=>{_0x1fae27();},0x3e8);})[_0x319755(0x18f)](()=>{removeEmptySpace(),workingPromise=![];}));}async function resetSong(){const _0x195803=_0x30cf80;formatText(),processedText['innerHTML']=formattedText,await transposedSong(0x0)[_0x195803(0x18f)](()=>{});}function maximizeSongText(){const _0x36bc99=_0x30cf80;songMaximizationArea[_0x36bc99(0x195)]();}function removeEmptySpace(){const _0x137951=_0x30cf80;let _0x1e50b7=document[_0x137951(0x1a2)][_0x137951(0x1b0)]()[_0x137951(0x196)];if(_0x1e50b7>0x5dc)return;let _0x2e5380=Number[_0x137951(0x19e)](processedText['getBoundingClientRect']()[_0x137951(0x196)])+Number[_0x137951(0x19e)](getComputedStyle(processedText)[_0x137951(0x1b6)][_0x137951(0x18c)]('px',''))+Number[_0x137951(0x19e)](getComputedStyle(processedText)[_0x137951(0x192)]['replace']('px',''))+Number[_0x137951(0x19e)](getComputedStyle(processedText)[_0x137951(0x19c)][_0x137951(0x18c)]('px',''))+Number[_0x137951(0x19e)](getComputedStyle(processedText)['paddingRight'][_0x137951(0x18c)]('px','')),_0x5702be=_0x2e5380*0x64/_0x1e50b7,_0x42b2aa=0x64-_0x5702be,_0xf4c120=_0x42b2aa>0x0;!_0xf4c120&&(_0x42b2aa=_0x42b2aa*-0x1);_0x42b2aa=Number[_0x137951(0x19e)](_0x42b2aa[_0x137951(0x19b)](0x2));let _0x54fce3='0';_0xf4c120?_0x54fce3=(0x64+_0x42b2aa)[_0x137951(0x19d)]()+'%':_0x54fce3=(0x64-_0x42b2aa)[_0x137951(0x19d)]()+'%',processedText[_0x137951(0x198)][_0x137951(0x199)]=_0x54fce3;}removeEmptySpace(),closeFullscreenBtn[_0x30cf80(0x1b9)](_0x30cf80(0x1ab),()=>{closeFullscreen();});function closeFullscreen(){const _0x1416ab=_0x30cf80;if(document[_0x1416ab(0x197)])document[_0x1416ab(0x197)]();else{if(document[_0x1416ab(0x19a)])document[_0x1416ab(0x19a)]();else document[_0x1416ab(0x1a1)]&&document['msExitFullscreen']();}}currentYear['innerHTML']=new Date()[_0x30cf80(0x1b2)]();
+class HeaderComponent extends HTMLElement {
+	constructor() {
+		super();
+		const template = document.createElement('template');
+		template.innerHTML = `
+		<div class="flex space-between wrap" id="songControlButtons">
+		<div>
+			<button><a href="../index.html">&#127968; Inicio</a></button>
+		</div>
+		<div>
+			<button onclick="maximizeSongText()">&#x2927; Maximizar</button>
+		</div>
+		<div class="flex nowrap" id="transpositionButtons">
+			<button onclick="transposedSong(10)">-1</button>
+			<button onclick="transposedSong(11)">-&#189;</button>
+			<button onclick="resetSong()">0</button>
+			<button onclick="transposedSong(1)">+&#189;</button>
+			<button onclick="transposedSong(2)">+1</button>
+		</div>
+	</div>
+		`;
+
+		this.appendChild(template.content.cloneNode(true));
+	}
+}
+customElements.define('header-component', HeaderComponent);
+
+
+
+
+
+
+
+
+
+class BodyContentComponent extends HTMLElement{
+	constructor() {
+		super();
+		const template = document.createElement('template');
+		template.innerHTML = `
+		<section>
+		<h1>${songTitle}</h1>
+
+		<pre id="songText-original" class="hidden">
+		${songOriginalText}
+		</pre>
+	</section>
+		`;
+
+		this.appendChild(template.content.cloneNode(true));
+	}
+}
+customElements.define('body-component',BodyContentComponent)
+
+
+
+
+
+
+
+class FooterComponent extends HTMLElement {
+	constructor() {
+		super();
+		const template = document.createElement('template');
+		template.innerHTML = `
+		<section id="songMaximizationArea">
+		<button id="closeFullscreen" class="fg-accent">×</button>
+		<pre id="songText-processed"></pre>
+	</section>
+
+	<section class="categories">
+		<p>categorias: ${categoriesTXT}</p>
+	</section>
+
+	<footer class="flex space-between">
+		<span>&copy;<span id="currentYear"></span></span>
+		<span>@EdisMR</span>
+	</footer>
+		`;
+
+		this.appendChild(template.content.cloneNode(true));
+	}
+}
+customElements.define('footer-component', FooterComponent);
+
+
+
+document.title=songTitle
+
+
+
+
+
+
+
+const originalText = document.getElementById('songText-original').innerHTML;
+const processedText = document.getElementById('songText-processed');
+const songMaximizationArea = document.getElementById('songMaximizationArea');
+const closeFullscreenBtn = document.getElementById('closeFullscreen');
+const currentYear = document.getElementById('currentYear')
+
+let formattedText = '';
+function formatText() {
+	formattedText = originalText.replace(/\[([^\]]+)\]/g, '<span class="chord">[$1]</span>');
+}
+formatText();
+processedText.innerHTML = formattedText;
+
+
+
+
+/**********************************
+ * Transposición de acordes
+ * ********************************
+*/
+
+// Lista circular de notas en sostenidos
+const NOTES_SHARP = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+
+// Equivalencias bemoles
+const FLAT_EQUIV = { 'C#': 'Db', 'D#': 'Eb', 'F#': 'Gb', 'G#': 'Ab', 'A#': 'Bb' };
+
+// Transpone un acorde individual (ej: "F#m", "Bb7")
+function transposeChord(chord, steps, useFlats = false) {
+	const match = chord.match(/^([A-G]{1}[#b]?)(.*)$/);
+	if (!match) return chord;
+
+	const [_, root, suffix] = match;
+
+	const normalizedRoot = root.replace('Db', 'C#')
+		.replace('Eb', 'D#')
+		.replace('Gb', 'F#')
+		.replace('Ab', 'G#')
+		.replace('Bb', 'A#');
+
+	const index = NOTES_SHARP.indexOf(normalizedRoot);
+	if (index === -1) return chord;
+
+	const newIndex = (index + steps + 12) % 12;
+	let newRoot = NOTES_SHARP[newIndex];
+
+	if (useFlats && FLAT_EQUIV[newRoot]) {
+		newRoot = FLAT_EQUIV[newRoot];
+	}
+
+	return newRoot + suffix;
+}
+
+
+// Transpone todo el texto (todos los acordes dentro de [ ])
+function transposeSongText(text, steps, useFlats = false) {
+	return text.replace(/\[([^\]]+)\]/g, (_, chord) => {
+		const transposed = transposeChord(chord, steps, useFlats);
+		return `[${transposed}]`;
+	});
+}
+
+let workingPromise = false
+async function transposedSong(steps) {
+	let result = transposeSongText(formattedText, steps, false);
+	formattedText = result;
+	processedText.innerHTML = result;
+	if (!workingPromise) {
+		workingPromise = true;
+		processedText.style.zoom = "100%";
+		new Promise(resolve => {
+			setTimeout(() => {
+				resolve();
+			}, 1000);
+		}).then(() => {
+			removeEmptySpace();
+			workingPromise = false;
+		});
+	}
+}
+
+
+async function resetSong() {
+	formatText();
+	processedText.innerHTML = formattedText;
+	await transposedSong(0).then(() => { });
+}
+
+
+
+function maximizeSongText() {
+	songMaximizationArea.requestFullscreen();
+}
+
+
+
+function removeEmptySpace() {
+	// Get the available width of the window screen
+	let bodyWidth = document.body.getBoundingClientRect().width;
+	if (bodyWidth > 1500) return
+
+	// Get the width of the body information section and convert it to a floating point number
+	let songWidth = Number.parseFloat(processedText.getBoundingClientRect().width) +
+		Number.parseFloat(getComputedStyle(processedText).marginLeft.replace('px', '')) +
+		Number.parseFloat(getComputedStyle(processedText).marginRight.replace('px', '')) +
+		Number.parseFloat(getComputedStyle(processedText).paddingLeft.replace('px', '')) +
+		Number.parseFloat(getComputedStyle(processedText).paddingRight.replace('px', ''));
+
+	let precentRelative = (songWidth * 100) / bodyWidth;
+	let addOrRemoveInPercent = (100 - precentRelative);
+	let addOrRemoveInPercentIsPositive = addOrRemoveInPercent > 0;
+	if (!addOrRemoveInPercentIsPositive) { addOrRemoveInPercent = addOrRemoveInPercent * -1; }
+
+	addOrRemoveInPercent = Number.parseFloat(addOrRemoveInPercent.toFixed(2));
+	let valueToApply = "0";
+	if (addOrRemoveInPercentIsPositive) {
+		valueToApply = (100 + addOrRemoveInPercent).toString() + "%";
+	} else {
+		valueToApply = (100 - addOrRemoveInPercent).toString() + "%";
+	}
+	processedText.style.zoom = valueToApply;
+}
+removeEmptySpace();
+
+
+
+
+closeFullscreenBtn.addEventListener('click', () => { closeFullscreen(); });
+function closeFullscreen() {
+	if (document.exitFullscreen) {
+		document.exitFullscreen();
+	} else if (document.webkitExitFullscreen) { /* Safari */
+		document.webkitExitFullscreen();
+	} else if (document.msExitFullscreen) { /* IE11 */
+		document.msExitFullscreen();
+	}
+}
+
+currentYear.innerHTML = new Date().getFullYear()

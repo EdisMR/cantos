@@ -36,10 +36,15 @@ const categoriesIndex = [
 ]
 
 const cantos = [
-	{ id: '1', name: 'Marco Navarro - Quiero ver', categories: ['1D'], fileUrl: 'c/1.html' },
-	{ id: '2', name: 'Hemos entregado', categories: ['6'], fileUrl: 'c/2.html' },
-	{ id: '3', name: 'Los Padrecitos - Ella Sabía', categories: ['1S'], fileUrl: 'c/3.html' },
+	{ id: '1', name: 'Marco Navarro - Quiero ver', categories: ['1D'], fileUrl: 'c/0001.html' },
+	{ id: '2', name: 'Hemos entregado', categories: ['6'], fileUrl: 'c/0002.html' },
+	{ id: '3', name: 'Los Padrecitos - Ella Sabía', categories: ['1S'], fileUrl: 'c/0003.html' },
+	{id:"4",name:"Porque tú eres bueno",categories:["6","1E"], fileUrl: 'c/0004.html'},
+	{id:"5",name:"Jesed - Sed de Dios",categories:["1D","1E"], fileUrl: 'c/0005.html'},
+	{id:"6",name:"Jesed - En Silencio",categories:["1E"], fileUrl: 'c/0006.html'},
+	{id:"7",name:"Martin Valverde - Gloria",categories:["1E"], fileUrl: 'c/0007.html'},
 ]
+/* {id:"",name:"",categories:[""], fileUrl: 'c/000.html'}, */
 
 let displayedSongs = []
 

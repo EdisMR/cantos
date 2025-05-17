@@ -1,1 +1,143 @@
-const _0x2b7af0=_0x51d5;(function(_0x1a04c8,_0x36aad8){const _0x450ade=_0x51d5,_0x305741=_0x1a04c8();while(!![]){try{const _0x22865a=-parseInt(_0x450ade(0x234))/0x1*(-parseInt(_0x450ade(0x1ff))/0x2)+-parseInt(_0x450ade(0x227))/0x3*(parseInt(_0x450ade(0x1fa))/0x4)+-parseInt(_0x450ade(0x21c))/0x5*(-parseInt(_0x450ade(0x207))/0x6)+-parseInt(_0x450ade(0x1f8))/0x7*(parseInt(_0x450ade(0x22c))/0x8)+-parseInt(_0x450ade(0x22d))/0x9+parseInt(_0x450ade(0x21b))/0xa+-parseInt(_0x450ade(0x23a))/0xb*(-parseInt(_0x450ade(0x224))/0xc);if(_0x22865a===_0x36aad8)break;else _0x305741['push'](_0x305741['shift']());}catch(_0x213c6c){_0x305741['push'](_0x305741['shift']());}}}(_0x5b63,0xb604a));const categoriesListContainer=document[_0x2b7af0(0x214)](_0x2b7af0(0x21a)),songSearchInput=document['getElementById'](_0x2b7af0(0x1f6)),filteredSongsListContainer=document[_0x2b7af0(0x214)]('filteredSongsListContainer'),currentYear=document[_0x2b7af0(0x214)]('currentYear'),categoriesIndex=[{'id':'0','name':_0x2b7af0(0x1f7)},{'id':'1','name':_0x2b7af0(0x1f4)},{'id':'2','name':'Misa-Ten\x20Piedad'},{'id':'3','name':_0x2b7af0(0x232)},{'id':'4','name':_0x2b7af0(0x21d)},{'id':'5','name':_0x2b7af0(0x210)},{'id':'6','name':_0x2b7af0(0x211)},{'id':'7','name':_0x2b7af0(0x226)},{'id':'8','name':_0x2b7af0(0x22f)},{'id':'9','name':_0x2b7af0(0x229)},{'id':'1A','name':'Misa-Comunión'},{'id':'1B','name':_0x2b7af0(0x225)},{'id':'1C','name':_0x2b7af0(0x1f3)},{'id':'1D','name':'Espiritu\x20Santo'},{'id':'1E','name':_0x2b7af0(0x217)},{'id':'1F','name':_0x2b7af0(0x1fd)},{'id':'1G','name':_0x2b7af0(0x222)},{'id':'1H','name':_0x2b7af0(0x223)},{'id':'1I','name':_0x2b7af0(0x212)},{'id':'1J','name':'Tiempo\x20Ordinario'},{'id':'1K','name':_0x2b7af0(0x213)},{'id':'1L','name':_0x2b7af0(0x220)},{'id':'1M','name':_0x2b7af0(0x209)},{'id':'1N','name':'Luz'},{'id':'1O','name':_0x2b7af0(0x235)},{'id':'1P','name':_0x2b7af0(0x20a)},{'id':'1Q','name':'Matrimonio'},{'id':'1R','name':_0x2b7af0(0x228)},{'id':'1S','name':_0x2b7af0(0x20c)}],cantos=[{'id':'1','name':'Marco\x20Navarro\x20-\x20Quiero\x20ver','categories':['1D'],'fileUrl':_0x2b7af0(0x239)},{'id':'2','name':_0x2b7af0(0x202),'categories':['6'],'fileUrl':_0x2b7af0(0x20f)},{'id':'3','name':_0x2b7af0(0x20b),'categories':['1S'],'fileUrl':_0x2b7af0(0x208)}];let displayedSongs=[];function listCategories(){const _0x453df4=_0x2b7af0;categoriesIndex[_0x453df4(0x230)](_0x5d2758=>{const _0x64dc14=_0x453df4,_0x169cca=document[_0x64dc14(0x22e)](_0x64dc14(0x216));_0x169cca[_0x64dc14(0x22a)][_0x64dc14(0x1fe)](_0x64dc14(0x1f5)),_0x169cca[_0x64dc14(0x22a)][_0x64dc14(0x1fe)](_0x64dc14(0x219)),_0x169cca[_0x64dc14(0x22a)][_0x64dc14(0x1fe)](_0x64dc14(0x237)),_0x169cca[_0x64dc14(0x22a)]['add'](_0x64dc14(0x22b)),_0x169cca['dataset'][_0x64dc14(0x21f)]=_0x5d2758['id'],_0x169cca[_0x64dc14(0x206)]=function(_0x9f27b){const _0x356c01=_0x64dc14,_0x8e77d9=document[_0x356c01(0x23c)]('.category-chip');_0x8e77d9[_0x356c01(0x230)](_0x18772b=>{const _0x427614=_0x356c01;_0x18772b[_0x427614(0x22a)][_0x427614(0x200)](_0x427614(0x1f9));}),_0x9f27b[_0x356c01(0x203)][_0x356c01(0x22a)][_0x356c01(0x1fe)](_0x356c01(0x1f9)),filterSongs(_0x5d2758['id']);},_0x169cca[_0x64dc14(0x218)]=''+_0x5d2758['name'],categoriesListContainer[_0x64dc14(0x20e)](_0x169cca);});}listCategories(),songSearchInput[_0x2b7af0(0x1fb)](_0x2b7af0(0x20d),_0x22dc37=>{const _0x450d5b=_0x2b7af0;searchSongName(_0x22dc37['target'][_0x450d5b(0x236)]);},![]);function _0x51d5(_0x3c6d8c,_0x2dbb84){const _0x5b6369=_0x5b63();return _0x51d5=function(_0x51d50e,_0x1a3052){_0x51d50e=_0x51d50e-0x1f3;let _0x3e16f7=_0x5b6369[_0x51d50e];return _0x3e16f7;},_0x51d5(_0x3c6d8c,_0x2dbb84);}function _0x5b63(){const _0x3bc042=['addEventListener','filter','Vigilia\x20Pascual','add','643182fRoRSe','remove','length','Hemos\x20entregado','target','.category-chip','href','onclick','78NMRDlH','c/3.html','Epifanía\x20del\x20Señor','Bautismo','Los\x20Padrecitos\x20-\x20Ella\x20Sabía','Marianos','input','appendChild','c/2.html','Misa-Honor\x20y\x20Gloria','Misa-Ofertorio','Pascua','Adviento','getElementById','name','span','Adoración','innerHTML','fg-accent','categories-list-container','5034130MgxcYG','567880yoSLFM','Misa-Aleluya','<li>No\x20hay\x20resultados</li>','categoryid','Pentecostés','toLowerCase','Navidad','Cuaresma','18852ZrwsQF','Misa-Despedida','Misa-Santo','6DkQRJj','Funeral','Misa-Cordero\x20de\x20Dios','classList','m-.5','8WJzDKG','1215108MPLdHk','createElement','Misa-Padre\x20Nuestro','forEach','includes','Misa-Gloria','categories','1tdXofH','Confirmación','value','p-.25','fileUrl','c/1.html','2079vcvhca','getFullYear','querySelectorAll','Santos','Misa-Entrada','category-chip','songSearchInput','Todo','4485565SrAiyJ','fg-success','2154116XvKfqa'];_0x5b63=function(){return _0x3bc042;};return _0x5b63();}function searchSongName(_0x5a69ea){const _0x442ea3=_0x2b7af0,_0x4131dd=document[_0x442ea3(0x23c)](_0x442ea3(0x204));_0x4131dd[_0x442ea3(0x230)](_0x19d74c=>{const _0x217e43=_0x442ea3;_0x19d74c[_0x217e43(0x22a)][_0x217e43(0x200)](_0x217e43(0x1f9));});if(_0x5a69ea[_0x442ea3(0x201)]>0x0){const _0x43086a=cantos['filter'](_0x3fce95=>_0x3fce95[_0x442ea3(0x215)][_0x442ea3(0x221)]()['includes'](_0x5a69ea[_0x442ea3(0x221)]()));displayedSongs=_0x43086a;}else displayedSongs=[];renderSongsList();}function filterSongs(_0x3ecd8c){const _0x52fddd=_0x2b7af0;if(_0x3ecd8c==='0'){listCompleteSongsList();return;}displayedSongs=[];const _0xc8c30e=cantos[_0x52fddd(0x1fc)](_0x465296=>_0x465296[_0x52fddd(0x233)][_0x52fddd(0x231)](_0x3ecd8c));displayedSongs=_0xc8c30e,renderSongsList();}function renderSongsList(){const _0x159f4f=_0x2b7af0;displayedSongs[_0x159f4f(0x201)]>0x0?(filteredSongsListContainer['innerHTML']='',displayedSongs[_0x159f4f(0x230)](_0x1c551a=>{const _0x162704=_0x159f4f,_0x5c7370=document[_0x162704(0x22e)]('li'),_0x5d840a=document['createElement']('a');_0x5d840a[_0x162704(0x205)]=_0x1c551a['fileUrl'],_0x5d840a[_0x162704(0x218)]=_0x1c551a[_0x162704(0x215)],_0x5c7370[_0x162704(0x20e)](_0x5d840a),filteredSongsListContainer['appendChild'](_0x5c7370);})):filteredSongsListContainer[_0x159f4f(0x218)]=_0x159f4f(0x21e);}function listCompleteSongsList(){const _0x55fbb7=_0x2b7af0;filteredSongsListContainer[_0x55fbb7(0x218)]='',cantos[_0x55fbb7(0x230)](_0x4857b=>{const _0xd45a9=_0x55fbb7,_0x4a58d5=document[_0xd45a9(0x22e)]('li'),_0x375ba8=document[_0xd45a9(0x22e)]('a');_0x375ba8[_0xd45a9(0x205)]=_0x4857b[_0xd45a9(0x238)],_0x375ba8[_0xd45a9(0x218)]=_0x4857b[_0xd45a9(0x215)],_0x4a58d5['appendChild'](_0x375ba8),filteredSongsListContainer[_0xd45a9(0x20e)](_0x4a58d5);});}currentYear[_0x2b7af0(0x218)]=new Date()[_0x2b7af0(0x23b)](),listCompleteSongsList();
+const categoriesListContainer = document.getElementById('categories-list-container');
+const songSearchInput = document.getElementById('songSearchInput');
+const filteredSongsListContainer = document.getElementById('filteredSongsListContainer');
+const currentYear = document.getElementById('currentYear')
+
+const categoriesIndex = [
+	{ id: '0', name: 'Todo' },
+	{ id: '1', name: 'Misa-Entrada' },
+	{ id: '2', name: 'Misa-Ten Piedad' },
+	{ id: '3', name: 'Misa-Gloria' },
+	{ id: '4', name: 'Misa-Aleluya' },
+	{ id: '5', name: 'Misa-Honor y Gloria' },
+	{ id: '6', name: 'Misa-Ofertorio' },
+	{ id: '7', name: 'Misa-Santo' },
+	{ id: '8', name: 'Misa-Padre Nuestro' },
+	{ id: '9', name: 'Misa-Cordero de Dios' },
+	{ id: '1A', name: 'Misa-Comunión' },
+	{ id: '1B', name: 'Misa-Despedida' },
+	{ id: '1C', name: 'Santos' },
+	{ id: '1D', name: 'Espiritu Santo' },
+	{ id: '1E', name: 'Adoración' },
+	{ id: '1F', name: 'Vigilia Pascual' },
+	{ id: '1G', name: 'Navidad' },
+	{ id: '1H', name: 'Cuaresma' },
+	{ id: '1I', name: 'Pascua' },
+	{ id: '1J', name: 'Tiempo Ordinario' },
+	{ id: '1K', name: 'Adviento' },
+	{ id: '1L', name: 'Pentecostés' },
+	{ id: '1M', name: 'Epifanía del Señor' },
+	{ id: '1N', name: 'Luz' },
+	{ id: '1O', name: 'Confirmación' },
+	{ id: '1P', name: 'Bautismo' },
+	{ id: '1Q', name: 'Matrimonio' },
+	{ id: '1R', name: 'Funeral' },
+	{ id: '1S', name: 'Marianos' }
+]
+
+const cantos = [
+	{ id: '1', name: 'Marco Navarro - Quiero ver', categories: ['1D'], fileUrl: 'c/0001.html' },
+	{ id: '2', name: 'Hemos entregado', categories: ['6'], fileUrl: 'c/0002.html' },
+	{ id: '3', name: 'Los Padrecitos - Ella Sabía', categories: ['1S'], fileUrl: 'c/0003.html' },
+	{id:"4",name:"Porque tú eres bueno",categories:["6","1E"], fileUrl: 'c/0004.html'},
+	{id:"5",name:"Jesed - Sed de Dios",categories:["1D","1E"], fileUrl: 'c/0005.html'},
+	{id:"6",name:"Jesed - En Silencio",categories:["1E"], fileUrl: 'c/0006.html'},
+	{id:"7",name:"Martin Valverde - Gloria",categories:["1E"], fileUrl: 'c/0007.html'},
+]
+/* {id:"",name:"",categories:[""], fileUrl: 'c/000.html'}, */
+
+let displayedSongs = []
+
+function listCategories() {
+	categoriesIndex.forEach(category => {
+		const categoryElement = document.createElement('span');
+		categoryElement.classList.add('category-chip');
+		categoryElement.classList.add('fg-accent');
+		categoryElement.classList.add('p-.25');
+		categoryElement.classList.add('m-.5');
+		categoryElement.dataset.categoryid = category.id;
+		categoryElement.onclick = function (event) {
+			const allCategoryChips = document.querySelectorAll('.category-chip');
+			allCategoryChips.forEach(chip => {
+				chip.classList.remove('fg-success');
+			});
+			event.target.classList.add('fg-success')
+			filterSongs(category.id)
+		};
+		categoryElement.innerHTML = `${category.name}`;
+		categoriesListContainer.appendChild(categoryElement);
+	});
+}
+listCategories();
+
+
+
+songSearchInput.addEventListener('input', (e) => {
+	searchSongName(e.target.value);
+}, false)
+function searchSongName(text) {
+	const allCategoryChips = document.querySelectorAll('.category-chip');
+	allCategoryChips.forEach(chip => {
+		chip.classList.remove('fg-success');
+	});
+	if (text.length > 0) {
+		const filteredSongs = cantos.filter(canto => canto.name.toLowerCase().includes(text.toLowerCase()));
+		displayedSongs = filteredSongs;
+	} else {
+		displayedSongs = [];
+	}
+	renderSongsList();
+}
+
+
+
+
+function filterSongs(id) {
+	if (id === '0') { listCompleteSongsList(); return; }
+	displayedSongs = [];
+	const filteredSongs = cantos.filter(canto => canto.categories.includes(id));
+	displayedSongs = filteredSongs;
+	renderSongsList();
+}
+
+
+
+
+function renderSongsList() {
+	if (displayedSongs.length > 0) {
+		filteredSongsListContainer.innerHTML = '';
+		displayedSongs.forEach(canto => {
+			//*<li><a href="c/1.html">enlace 1</a></li>
+			const songElement = document.createElement('li');
+			const songLink = document.createElement('a');
+			songLink.href = canto.fileUrl;
+			songLink.innerHTML = canto.name;
+			songElement.appendChild(songLink);
+			filteredSongsListContainer.appendChild(songElement);
+		});
+	} else {
+		filteredSongsListContainer.innerHTML = '<li>No hay resultados</li>';
+	}
+}
+
+
+function listCompleteSongsList() {
+	//Display complete songs list
+	filteredSongsListContainer.innerHTML = '';
+	cantos.forEach(canto => {
+		//*<li><a href="c/1.html">enlace 1</a></li>
+		const songElement = document.createElement('li');
+		const songLink = document.createElement('a');
+		songLink.href = canto.fileUrl;
+		songLink.innerHTML = canto.name;
+		songElement.appendChild(songLink);
+		filteredSongsListContainer.appendChild(songElement);
+	});
+}
+
+
+currentYear.innerHTML = new Date().getFullYear()
+
+
+
+listCompleteSongsList();
