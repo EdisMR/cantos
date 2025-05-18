@@ -3,6 +3,8 @@ https://obfuscator.io/
 TODO: Add icons to website
 TODO: Add Martian Mono Font to website
 
+Idealmente 45 columnas para una visibilidad decente
+
 template:
 
 
