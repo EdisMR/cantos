@@ -120,8 +120,13 @@ footer {
 	#transpositionButtons {
 		font-size: 17px;
 	}
-	#songText-processed{
+
+	#songText-processed {
 		font-size: 13px;
+	}
+
+	#songMaximizationArea:fullscreen {
+		padding: 3px;
 	}
 }
 
@@ -148,6 +153,10 @@ footer {
 	#songText-processed {
 		font-size: 16px;
 	}
+
+	#songMaximizationArea:fullscreen {
+		padding: 3px;
+	}
 }
 
 @media (orientation: portrait) and (600px <=width <=675px) {
@@ -155,7 +164,7 @@ footer {
 		--ft-size: 14px;
 	}
 
-	body{
+	body {
 		padding: 3px;
 		margin: 0px;
 	}
@@ -166,6 +175,10 @@ footer {
 
 	#songText-processed {
 		font-size: 12px;
+	}
+
+	#songMaximizationArea:fullscreen {
+		padding: 3px;
 	}
 }
 
