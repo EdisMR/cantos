@@ -90,7 +90,7 @@ footer {
 	}
 }
 
-@media (orientation:portrait) and (width<400px) {
+@media (orientation:portrait) and (width <400px) {
 	#transpositionButtons {
 		margin-top: 10px
 	}
@@ -102,7 +102,7 @@ footer {
 	}
 
 	body {
-		padding: 0;
+		padding: 3px;
 		margin: 0;
 	}
 
@@ -119,6 +119,9 @@ footer {
 	#transpositionButtons {
 		font-size: 17px;
 	}
+	#songText-processed{
+		font-size: 13px;
+	}
 }
 
 @media (orientation: portrait) and (400px <=width <=600px) {
@@ -127,7 +130,7 @@ footer {
 	}
 
 	body {
-		padding: 0;
+		padding: 3px;
 		margin: 0;
 	}
 
@@ -151,12 +154,17 @@ footer {
 		--ft-size: 14px;
 	}
 
+	body{
+		padding: 3px;
+		margin: 0px;
+	}
+
 	h1 {
 		font-size: 16px;
 	}
 
 	#songText-processed {
-		font-size: 16px;
+		font-size: 12px;
 	}
 }
 
@@ -188,7 +196,8 @@ footer {
 	:root {
 		--ft-size: 16px;
 	}
-	h1{
+
+	h1 {
 		font-size: 18px;
 	}
 }
@@ -197,11 +206,13 @@ footer {
 	:root {
 		--ft-size: 16px;
 	}
-	h1{
+
+	h1 {
 		font-size: 20px;
 	}
+
 	#songText-processed {
-		font-size: 16px;
+		font-size: 12px;
 	}
 }
 
@@ -213,8 +224,9 @@ footer {
 	h1 {
 		font-size: 19px;
 	}
+
 	#songText-processed {
-		font-size: 15px;
+		font-size: 12px;
 	}
 }
 

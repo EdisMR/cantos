@@ -3,6 +3,10 @@ https://obfuscator.io/
 TODO: Add icons to website
 TODO: Add Martian Mono Font to website
 
+Tablet: 601 x 962
+Cell: 384 x 857
+PC: 1280 x 1024
+
 Idealmente 45 columnas para una visibilidad decente
 
 template:
