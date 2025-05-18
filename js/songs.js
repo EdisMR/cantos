@@ -215,7 +215,7 @@ function removeEmptySpace() {
 	}
 	processedText.style.zoom = valueToApply;
 }
-removeEmptySpace();
+/* removeEmptySpace(); */
 
 
 
