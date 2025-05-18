@@ -24,6 +24,7 @@ h1 {
 	scrollbar-width: thin;
 	background-color: #000;
 	position: relative;
+	user-select: none;
 }
 
 #songMaximizationArea:fullscreen #songText-processed {

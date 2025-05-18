@@ -114,7 +114,7 @@ function renderSongsList() {
 			const songElement = document.createElement('li');
 			const songLink = document.createElement('a');
 			songLink.href = canto.fileUrl;
-			songLink.innerHTML = canto.name;
+			songLink.innerHTML = `${canto.id} - ${canto.name}`;
 			songElement.appendChild(songLink);
 			filteredSongsListContainer.appendChild(songElement);
 		});
@@ -132,7 +132,7 @@ function listCompleteSongsList() {
 		const songElement = document.createElement('li');
 		const songLink = document.createElement('a');
 		songLink.href = canto.fileUrl;
-		songLink.innerHTML = canto.name;
+		songLink.innerHTML = `${canto.id} - ${canto.name}`;
 		songElement.appendChild(songLink);
 		filteredSongsListContainer.appendChild(songElement);
 	});

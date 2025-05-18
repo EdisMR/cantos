@@ -17,7 +17,14 @@ footer {
 	margin-bottom: 25px;
 }
 
+#filteredSongsListContainer {
+	list-style-type: none;
+	padding: 0px;
+}
 
+#filteredSongsListContainer li {
+	padding: 0px;
+}
 
 
 
