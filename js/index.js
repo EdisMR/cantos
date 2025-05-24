@@ -45,9 +45,12 @@ const cantos = [
 	{ id: "7", name: "Martin Valverde - Gloria", categories: ["1E"], fileUrl: 'c/0007.html' },
 	{ id: "8", name: "Vali Olguín - Es Verdad", categories: ["1E"], fileUrl: 'c/0008.html' },
 	{ id: "9", name: "Maestro Bueno", categories: ["6"], fileUrl: 'c/0009.html' },
-	{id:"10",name:"Gloria Catecúmeno",categories:["3"], fileUrl: 'c/0010.html'},
+	{ id: "10", name: "Gloria Catecúmeno", categories: ["3"], fileUrl: 'c/0010.html' },
+	{ id: "11", name: "Petra - Llévame a tus atrios", categories: ["1E"], fileUrl: 'c/0011.html' },
+	{ id: "12", name: "MNM RCCES Mex 2018 - Hay poder", categories: ["1E"], fileUrl: 'c/0012.html' },
+	{ id: "13", name: "Marcos Witt - Quiero levantar mis manos", categories: ["1E"], fileUrl: 'c/0013.html' },
 ]
-/* {id:"",name:"",categories:[""], fileUrl: 'c/00.html'}, */
+/* { id: "", name: "", categories: [""], fileUrl: 'c/00.html' }, */
 
 let displayedSongs = []
 

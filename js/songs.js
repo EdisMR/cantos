@@ -232,3 +232,4 @@ function closeFullscreen() {
 }
 
 currentYear.innerHTML = new Date().getFullYear()
+document.title=songTitle

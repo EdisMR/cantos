@@ -8,6 +8,7 @@ Cell: 384 x 857
 PC: 1280 x 1024
 
 Idealmente 45 columnas para una visibilidad decente
+--------------------------------------------
 
 template:
 
