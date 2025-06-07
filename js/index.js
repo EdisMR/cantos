@@ -49,6 +49,7 @@ const cantos = [
 	{ id: "11", name: "Petra - Llévame a tus atrios", categories: ["1E"], fileUrl: 'c/0011.html' },
 	{ id: "12", name: "MNM RCCES Mex 2018 - Hay poder", categories: ["1E"], fileUrl: 'c/0012.html' },
 	{ id: "13", name: "Marcos Witt - Quiero levantar mis manos", categories: ["1E"], fileUrl: 'c/0013.html' },
+	{ id: "14", name: "Jesed - Que hermoso es", categories: ["6"], fileUrl: 'c/0014.html' },
 ]
 /* { id: "", name: "", categories: [""], fileUrl: 'c/00.html' }, */
 
