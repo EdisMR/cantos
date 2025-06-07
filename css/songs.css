@@ -160,6 +160,8 @@ footer {
 }
 
 @media (orientation: portrait) and (600px <=width <=675px) {
+
+	/* Tablet */
 	:root {
 		--ft-size: 14px;
 	}
@@ -174,7 +176,7 @@ footer {
 	}
 
 	#songText-processed {
-		font-size: 12px;
+		font-size: 16px;
 	}
 
 	#songMaximizationArea:fullscreen {
@@ -217,6 +219,8 @@ footer {
 }
 
 @media (orientation: landscape) and (820px <=width <=870px) {
+
+	/* CEL */
 	:root {
 		--ft-size: 16px;
 	}
@@ -226,25 +230,27 @@ footer {
 	}
 
 	#songText-processed {
-		font-size: 12px;
+		font-size: 13px;
 	}
 }
 
 @media (orientation: landscape) and (870px <=width <=970px) {
+
 	:root {
 		--ft-size: 14px;
 	}
-
+	
 	h1 {
 		font-size: 19px;
 	}
-
+	
 	#songText-processed {
 		font-size: 12px;
 	}
 }
 
 @media (orientation: landscape) and (width > 970px) {
+	/* tablet */
 	:root {
 		--ft-size: 14px;
 	}
@@ -254,6 +260,6 @@ footer {
 	}
 
 	#songText-processed {
-		font-size: 14px;
+		font-size: 16px;
 	}
 }

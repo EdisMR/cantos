@@ -168,7 +168,7 @@ async function transposedSong(steps) {
 				resolve();
 			}, 1000);
 		}).then(() => {
-			removeEmptySpace();
+			/* removeEmptySpace(); */
 			workingPromise = false;
 		});
 	}

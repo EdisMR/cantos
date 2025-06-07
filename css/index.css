@@ -62,9 +62,11 @@ footer {
 	}
 
 	body {
-		padding: 0;
+		padding: 0px;
+		padding-left: 10px;
+		padding-right: 10px;
 		margin: 0;
-	}
+		}
 
 	form,
 	fieldset {
@@ -105,6 +107,11 @@ footer {
 
 	#filteredSongsListContainer {
 		column-count: 2;
+	}
+
+	body {
+		padding: 10px;
+		margin: 0;
 	}
 }
 
