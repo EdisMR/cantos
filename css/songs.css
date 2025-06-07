@@ -7,6 +7,17 @@ html {
 	font-size: var(--ft-size);
 }
 
+*::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	width: 0px;
+	background-color: transparent;
+	color: transparent;
+}
+
 h1 {
 	font-size: 20px;
 }
@@ -98,12 +109,13 @@ footer {
 }
 
 @media (orientation: portrait) and (300px <=width <=400px) {
+	/* CEL */
 	:root {
 		--ft-size: 17px;
 	}
 
 	body {
-		padding: 3px;
+		padding: 5px;
 		margin: 0;
 	}
 
@@ -239,17 +251,18 @@ footer {
 	:root {
 		--ft-size: 14px;
 	}
-	
+
 	h1 {
 		font-size: 19px;
 	}
-	
+
 	#songText-processed {
 		font-size: 12px;
 	}
 }
 
 @media (orientation: landscape) and (width > 970px) {
+
 	/* tablet */
 	:root {
 		--ft-size: 14px;
