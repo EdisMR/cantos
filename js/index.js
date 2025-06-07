@@ -51,6 +51,8 @@ const cantos = [
 	{ id: "13", name: "Marcos Witt - Quiero levantar mis manos", categories: ["1E"], fileUrl: 'c/0013.html' },
 	{ id: "14", name: "Jesed - Que hermoso es", categories: ["6"], fileUrl: 'c/0014.html' },
 	{ id: "15", name: "Tuya es mi vida", categories: ["6"], fileUrl: 'c/0015.html' },
+	{ id: "16", name: "Hmna Glenda - Si Conocieras", categories: ["1E"], fileUrl: 'c/0016.html' },
+	{ id: "17", name: "Hmna Inés de Jesús - Siervo Doliente", categories: ["1H"], fileUrl: 'c/0017.html' },
 ]
 /* { id: "", name: "", categories: [""], fileUrl: 'c/00.html' }, */
 
