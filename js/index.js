@@ -53,6 +53,8 @@ const cantos = [
 	{ id: "15", name: "Tuya es mi vida", categories: ["6"], fileUrl: 'c/0015.html' },
 	{ id: "16", name: "Hmna Glenda - Si Conocieras", categories: ["1E"], fileUrl: 'c/0016.html' },
 	{ id: "17", name: "Hmna Inés de Jesús - Siervo Doliente", categories: ["1H"], fileUrl: 'c/0017.html' },
+	{ id: "18", name: "Envía la Unción", categories: ["1D,1E"], fileUrl: 'c/0018.html' },
+	{ id: "19", name: "Athenas Venica - Santo", categories: ["1D","1E"], fileUrl: 'c/0019.html' },
 ]
 /* { id: "", name: "", categories: [""], fileUrl: 'c/00.html' }, */
 
