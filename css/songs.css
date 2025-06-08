@@ -40,7 +40,6 @@ h1 {
 
 #songMaximizationArea:fullscreen #songText-processed {
 	background-color: #000;
-	color: #c9ffdb;
 	font-weight: bold;
 	padding: 0 2px 0 2px;
 }
@@ -60,10 +59,12 @@ h1 {
 
 #songText-processed {
 	width: fit-content;
+	color: #cbf0ff;
+	font-family: 'Martian Mono', "Roboto Mono", monospace;
 }
 
 .chord {
-	color: rgb(69, 212, 26);
+	color: #d6f0ff;
 	font-weight: bold;
 }
 
