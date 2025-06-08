@@ -33,7 +33,7 @@ customElements.define('header-component', HeaderComponent);
 
 
 
-class BodyContentComponent extends HTMLElement{
+class BodyContentComponent extends HTMLElement {
 	constructor() {
 		super();
 		const template = document.createElement('template');
@@ -50,7 +50,7 @@ class BodyContentComponent extends HTMLElement{
 		this.appendChild(template.content.cloneNode(true));
 	}
 }
-customElements.define('body-component',BodyContentComponent)
+customElements.define('body-component', BodyContentComponent)
 
 
 
@@ -72,6 +72,8 @@ class FooterComponent extends HTMLElement {
 		<p>categorias: ${categoriesTXT}</p>
 	</section>
 
+	<section id="otherSongsLinks"></section>
+
 	<footer class="flex space-between">
 		<span>&copy;<span id="currentYear"></span></span>
 		<span>@EdisMR</span>
@@ -85,7 +87,7 @@ customElements.define('footer-component', FooterComponent);
 
 
 
-document.title=songTitle
+document.title = songTitle
 
 
 
@@ -231,5 +233,21 @@ function closeFullscreen() {
 	}
 }
 
+
+
+function addOtherSongsLinks() {
+	const otherSongsLinks = document.getElementById('otherSongsLinks');
+	const files = ['0001', '0002', '0003', '0004', '0005', '0006', '0007', '0008', '0009', '0010',
+		'0011', '0012', '0013', '0014', '0015', '0016', '0017', '0018', '0019'];
+	files.forEach(file => {
+		const link = document.createElement('a');
+		link.href = `./${file}.html`;
+		link.textContent = `${file}`;
+		link.className = 'other-song-link';
+		otherSongsLinks.appendChild(link);
+	})
+}
+addOtherSongsLinks();
+
 currentYear.innerHTML = new Date().getFullYear()
-document.title=songTitle
+document.title = songTitle
