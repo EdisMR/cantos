@@ -55,6 +55,7 @@ const cantos = [
 	{ id: "17", name: "Hmna Inés de Jesús - Siervo Doliente", categories: ["1H"], fileUrl: 'c/0017.html' },
 	{ id: "18", name: "Envía la Unción", categories: ["1D,1E"], fileUrl: 'c/0018.html' },
 	{ id: "19", name: "Athenas Venica - Santo", categories: ["1D","1E"], fileUrl: 'c/0019.html' },
+	{ id: "20", name: "Himno a la Virgen de los Ángeles", categories: ["1S"], fileUrl: 'c/0020.html' },
 ]
 /* { id: "", name: "", categories: [""], fileUrl: 'c/00.html' }, */
 
