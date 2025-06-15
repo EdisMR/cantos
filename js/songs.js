@@ -45,6 +45,14 @@ class BodyContentComponent extends HTMLElement {
 		${songOriginalText}
 		</pre>
 	</section>
+	<section id="songMaximizationArea">
+		<button type="button" id="closeFullscreen" class="fg-accent">×</button>
+		<pre id="songText-processed"></pre>
+	</section>
+
+	<section class="categories">
+		<p>categorias: ${categoriesTXT}</p>
+	</section>
 		`;
 
 		this.appendChild(template.content.cloneNode(true));
@@ -63,14 +71,7 @@ class FooterComponent extends HTMLElement {
 		super();
 		const template = document.createElement('template');
 		template.innerHTML = `
-		<section id="songMaximizationArea">
-		<button id="closeFullscreen" class="fg-accent">×</button>
-		<pre id="songText-processed"></pre>
-	</section>
-
-	<section class="categories">
-		<p>categorias: ${categoriesTXT}</p>
-	</section>
+		
 
 	<section id="otherSongsLinks"></section>
 
@@ -238,7 +239,7 @@ function closeFullscreen() {
 function addOtherSongsLinks() {
 	const otherSongsLinks = document.getElementById('otherSongsLinks');
 	const files = ['0001', '0002', '0003', '0004', '0005', '0006', '0007', '0008', '0009', '0010',
-		'0011', '0012', '0013', '0014', '0015', '0016', '0017', '0018', '0019', '0020',];
+		'0011', '0012', '0013', '0014', '0015', '0016', '0017', '0018', '0019', '0020','0021',];
 	files.forEach(file => {
 		const link = document.createElement('a');
 		link.href = `./${file}.html`;
