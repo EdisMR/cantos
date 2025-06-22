@@ -57,6 +57,8 @@ const cantos = [
 	{ id: "19", name: "Athenas Venica - Santo", categories: ["1D","1E"], fileUrl: 'c/0019.html' },
 	{ id: "20", name: "Himno a la Virgen de los Ángeles", categories: ["1S"], fileUrl: 'c/0020.html' },
 	{ id: "21", name: "Himno a Sta Catalina de Alejandría", categories: ["1C"], fileUrl: 'c/0021.html' },
+	{ id: "22", name: "Karen - Ven Espíritu de Dios", categories: ["1D","1E"], fileUrl: 'c/0022.html' },
+	{ id: "23", name: "El Señor está pasando por aquí", categories: ["1E"], fileUrl: 'c/0023.html' },
 ]
 /* { id: "", name: "", categories: [""], fileUrl: 'c/00.html' }, */
 
