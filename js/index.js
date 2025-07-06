@@ -152,7 +152,7 @@ function listCompleteSongsList() {
 }
 
 
-currentYear.innerHTML = `${new Date().getFullYear()} (250706-1)`;
+currentYear.innerHTML = `${new Date().getFullYear()} (250706-2)`;
 
 
 
