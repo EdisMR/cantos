@@ -135,8 +135,10 @@
 
 		function updateDebugInfo() {
 			const debugData = {
-				projectDate: '15/6/2025, 6:36:09 a. m.',
-				currentClientDate: new Date().toLocaleString(),
+				projectBuildVersion: '1',
+				projectBuildDate: '2025-07-06 11:09:03',
+				projectShortBuild: '250706-1',
+				currentClientDate: parseDate(new Date()),
 				clientInfo: clientInfo,
 				browserInfo: browserInfo,
 				screenInfo: screenInfo,
@@ -153,6 +155,18 @@
 
 		// Llamada inicial para mostrar la información tan pronto como sea posible
 		updateDebugInfo();
+
+		function parseDate(date){
+			/* get date as "2025-02-31 22:25:58" */
+			const d = new Date(date);
+			const year = d.getFullYear();
+			const month = String(d.getMonth() + 1).padStart(2, '0'); // Los meses son 0-indexados
+			const day = String(d.getDate()).padStart(2, '0');
+			const hours = String(d.getHours()).padStart(2, '0');
+			const minutes = String(d.getMinutes()).padStart(2, '0');
+			const seconds = String(d.getSeconds()).padStart(2, '0');
+			return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+		}
 	</script>
 	<a href="index.html">Volver al inicio</a>
 </body>
