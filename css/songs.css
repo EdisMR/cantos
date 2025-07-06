@@ -30,6 +30,10 @@ h1 {
 	white-space: nowrap;
 }
 
+#songMaximizationArea {
+	min-height: 60vh;
+}
+
 #songMaximizationArea:fullscreen {
 	overflow-x: auto;
 	scrollbar-width: thin;
