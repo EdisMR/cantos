@@ -229,6 +229,24 @@ footer {
 	}
 }
 
+@media (orientation: portrait) and (width > 700px) {
+	:root {
+		--ft-size: 15px;
+	}
+
+	h1 {
+		font-size: 17px;
+	}
+
+	#songText-processed {
+		font-size: 17px;
+	}
+
+	#transpositionButtons {
+		font-size: 17px;
+	}
+}
+
 
 
 
@@ -289,5 +307,20 @@ footer {
 
 	#songText-processed {
 		font-size: 16px;
+	}
+}
+
+@media (orientation: landscape) and (width > 1300px) {
+	/* tablet */
+	:root {
+		--ft-size: 15px;
+	}
+
+	h1 {
+		font-size: 17px;
+	}
+
+	#songText-processed {
+		font-size: 18px;
 	}
 }

@@ -8,13 +8,13 @@ class HeaderComponent extends HTMLElement {
 			<button><a href="../index.html">&#127968; Inicio</a></button>
 		</div>
 		<div>
-			<button onclick="maximizeSongText()">&#x2927; Maximizar</button>
+			<button onclick="maximizeSongText()" title="Tecla [m]">&#x2927; Maximizar</button>
 		</div>
 		<div class="flex nowrap" id="transpositionButtons">
 			<button onclick="transposedSong(10)">-1</button>
-			<button onclick="transposedSong(11)">-&#189;</button>
-			<button onclick="resetSong()">0</button>
-			<button onclick="transposedSong(1)">+&#189;</button>
+			<button onclick="transposedSong(11)" title="Tecla [+]">-&#189;</button>
+			<button onclick="resetSong()" title="Tecla [0]">0</button>
+			<button onclick="transposedSong(1)" title="Tecla [-]">+&#189;</button>
 			<button onclick="transposedSong(2)">+1</button>
 		</div>
 	</div>
@@ -186,10 +186,6 @@ async function resetSong() {
 
 
 
-function maximizeSongText() {
-	songMaximizationArea.requestFullscreen();
-}
-
 
 
 function removeEmptySpace() {
@@ -222,6 +218,11 @@ function removeEmptySpace() {
 
 
 
+function maximizeSongText() {
+	songMaximizationArea.requestFullscreen();
+}
+
+
 
 closeFullscreenBtn.addEventListener('click', () => { closeFullscreen(); });
 function closeFullscreen() {
@@ -233,6 +234,26 @@ function closeFullscreen() {
 		document.msExitFullscreen();
 	}
 }
+
+
+window.addEventListener('keydown', (event) => {
+	if (event.key === 'm' || event.key === 'M') {
+		if (document.fullscreenElement) {
+			closeFullscreen();
+		} else {
+			maximizeSongText();
+		}
+	}
+	if( event.key === '+') {
+		transposedSong(1);
+	}
+	if( event.key === '-') {
+		transposedSong(-1);
+	}
+	if (event.key === '0' || event.key === 'r' || event.key === 'R') {
+		resetSong();
+	}
+});
 
 
 

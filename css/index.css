@@ -128,11 +128,11 @@ footer {
 
 @media (orientation: portrait) and (width>750px) {
 	:root {
-		--ft-size: 13px;
+		--ft-size: 15px;
 	}
 
 	h1 {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	#filteredSongsListContainer {
