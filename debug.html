@@ -135,9 +135,9 @@
 
 		function updateDebugInfo() {
 			const debugData = {
-				projectBuildVersion: '2',
-				projectBuildDate: '2025-07-06 11:26:03',
-				projectShortBuild: '250706-2',
+				projectBuildVersion: '1',
+				projectBuildDate: '2025-07-25 16:24:03',
+				projectShortBuild: '250725-1',
 				currentClientDate: parseDate(new Date()),
 				clientInfo: clientInfo,
 				browserInfo: browserInfo,
@@ -157,7 +157,6 @@
 		updateDebugInfo();
 
 		function parseDate(date){
-			/* get date as "2025-02-31 22:25:58" */
 			const d = new Date(date);
 			const year = d.getFullYear();
 			const month = String(d.getMonth() + 1).padStart(2, '0'); // Los meses son 0-indexados
