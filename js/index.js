@@ -37,15 +37,15 @@ const categoriesIndex = [
 
 const cantos = [
 	{ id: '1', name: 'Marco Navarro - Quiero ver', categories: ['1D'], fileUrl: 'c/0001.html' },
-	{ id: '2', name: 'Hemos entregado', categories: ['6'], fileUrl: 'c/0002.html' },
+	{ id: '2', name: 'Jesed - Hemos entregado', categories: ['6'], fileUrl: 'c/0002.html' },
 	{ id: '3', name: 'Los Padrecitos - Ella Sabía', categories: ['1S'], fileUrl: 'c/0003.html' },
-	{ id: "4", name: "Porque tú eres bueno", categories: ["6", "1E"], fileUrl: 'c/0004.html' },
+	{ id: "4", name: "Marcos Witt - Porque tú eres bueno", categories: ["6", "1E"], fileUrl: 'c/0004.html' },
 	{ id: "5", name: "Jesed - Sed de Dios", categories: ["1D", "1E"], fileUrl: 'c/0005.html' },
 	{ id: "6", name: "Jesed - En Silencio", categories: ["1E"], fileUrl: 'c/0006.html' },
 	{ id: "7", name: "Martin Valverde - Gloria", categories: ["1E"], fileUrl: 'c/0007.html' },
 	{ id: "8", name: "Vali Olguín - Es Verdad", categories: ["1E"], fileUrl: 'c/0008.html' },
 	{ id: "9", name: "Maestro Bueno", categories: ["6"], fileUrl: 'c/0009.html' },
-	{ id: "10", name: "Gloria Catecúmeno", categories: ["3"], fileUrl: 'c/0010.html' },
+	{ id: "10", name: "Camino Neocatecumenal - Gloria Catecúmeno", categories: ["3"], fileUrl: 'c/0010.html' },
 	{ id: "11", name: "Petra - Llévame a tus atrios", categories: ["1E"], fileUrl: 'c/0011.html' },
 	{ id: "12", name: "MNM RCCES Mex 2018 - Hay poder", categories: ["1E"], fileUrl: 'c/0012.html' },
 	{ id: "13", name: "Marcos Witt - Quiero levantar mis manos", categories: ["1E"], fileUrl: 'c/0013.html' },
@@ -58,7 +58,8 @@ const cantos = [
 	{ id: "20", name: "Himno a la Virgen de los Ángeles", categories: ["1S"], fileUrl: 'c/0020.html' },
 	{ id: "21", name: "Himno a Sta Catalina de Alejandría", categories: ["1C"], fileUrl: 'c/0021.html' },
 	{ id: "22", name: "Karen - Ven Espíritu de Dios", categories: ["1D","1E"], fileUrl: 'c/0022.html' },
-	{ id: "23", name: "El Señor está pasando por aquí", categories: ["1E"], fileUrl: 'c/0023.html' },
+	{ id: "23", name: "Luis Mauricio - El Señor está pasando por aquí", categories: ["1E"], fileUrl: 'c/0023.html' },
+	{ id: "24", name: "Son by Four - La fé de María", categories: ["1S"], fileUrl: 'c/0024.html' },
 ]
 /* { id: "", name: "", categories: [""], fileUrl: 'c/00.html' }, */
 
@@ -152,7 +153,7 @@ function listCompleteSongsList() {
 }
 
 
-currentYear.innerHTML = `${new Date().getFullYear()} (250725-1)`;
+currentYear.innerHTML = `${new Date().getFullYear()} (250726-1)`;
 
 
 

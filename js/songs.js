@@ -70,8 +70,24 @@ class FooterComponent extends HTMLElement {
 	constructor() {
 		super();
 		const template = document.createElement('template');
+
+		let textUrls = ''
+
+		if (!songUrlsLinks || songUrlsLinks.length === 0) {
+			textUrls = `<li>-- No hay enlaces relacionados. --</li>`;
+		}
+		for (let x = 0; x < songUrlsLinks.length; x++) {
+			textUrls += `<li><a href="${songUrlsLinks[x]}" target="_blank" rel="noopener noreferrer">${songUrlsLinks[x]}</a></li>`;
+		}
+
 		template.innerHTML = `
-		
+	<section>
+		<strong>Enlaces relacionados</strong>
+	<ul>
+		${textUrls}
+	</ul>
+	</section>
+
 
 	<section id="otherSongsLinks"></section>
 
@@ -244,10 +260,10 @@ window.addEventListener('keydown', (event) => {
 			maximizeSongText();
 		}
 	}
-	if( event.key === '+') {
+	if (event.key === '+') {
 		transposedSong(1);
 	}
-	if( event.key === '-') {
+	if (event.key === '-') {
 		transposedSong(-1);
 	}
 	if (event.key === '0' || event.key === 'r' || event.key === 'R') {
@@ -260,7 +276,8 @@ window.addEventListener('keydown', (event) => {
 function addOtherSongsLinks() {
 	const otherSongsLinks = document.getElementById('otherSongsLinks');
 	const files = ['0001', '0002', '0003', '0004', '0005', '0006', '0007', '0008', '0009', '0010',
-		'0011', '0012', '0013', '0014', '0015', '0016', '0017', '0018', '0019', '0020', '0021', '0022', '0023'];
+		'0011', '0012', '0013', '0014', '0015', '0016', '0017', '0018', '0019', '0020', '0021', '0022', '0023',
+		'0024'];
 	files.forEach(file => {
 		const link = document.createElement('a');
 		link.href = `./${file}.html`;
