@@ -93,6 +93,7 @@ class FooterComponent extends HTMLElement {
 
 	<footer class="flex space-between">
 		<span>&copy;<span id="currentYear"></span></span>
+		<span>Gran Cancionero</span>
 		<span>@EdisMR</span>
 	</footer>
 		`;
